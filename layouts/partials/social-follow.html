@@ -1,0 +1,6 @@
+<nav class="social-links social-icons" aria-label="Social media">
+  {{ with site.Params.social.mastodon }}<a href="{{ . }}" target="_blank" rel="me noopener" aria-label="Follow on Mastodon" title="Mastodon">{{ partial "social-icon.html" "mastodon" }}</a>{{ end }}
+  {{ with site.Params.social.facebook }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="Follow on Facebook" title="Facebook">{{ partial "social-icon.html" "facebook" }}</a>{{ end }}
+  {{ with site.Params.social.bluesky }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="Follow on Bluesky" title="Bluesky">{{ partial "social-icon.html" "bluesky" }}</a>{{ end }}
+  {{ with site.Params.social.linkedin }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="Follow on LinkedIn" title="LinkedIn">{{ partial "social-icon.html" "linkedin" }}</a>{{ end }}
+</nav>

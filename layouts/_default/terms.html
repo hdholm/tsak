@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="content-grid wrap">
+  <section class="article-list">
+    <div class="terms-grid">
+      {{ range .Data.Terms.ByCount }}
+        <a class="term-card" href="{{ .Page.RelPermalink }}"><strong>{{ .Page.LinkTitle }}</strong><span>{{ .Count }} {{ if eq .Count 1 }}article{{ else }}articles{{ end }}</span></a>
+      {{ end }}
+    </div>
+  </section>
+  {{ partial "sidebar.html" . }}
+</div>
+{{ end }}

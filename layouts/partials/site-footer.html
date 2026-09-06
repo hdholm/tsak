@@ -1,0 +1,6 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; {{ now.Year }} {{ with site.Params.author_url }}<a href="{{ . }}">{{ site.Params.author }}</a>{{ else }}{{ site.Params.author }}{{ end }}</p>
+    {{ partial "social-follow.html" . }}
+  </div>
+</footer>

@@ -1,0 +1,24 @@
+{{- $image := .Param "featured_image" -}}
+{{- $imageURL := "" -}}
+{{- if $image -}}
+  {{- $imageURL = strings.TrimPrefix "/" $image | relURL -}}
+{{- end -}}
+<header class="site-header{{ if $imageURL }} has-cover{{ end }}"{{ if $imageURL }} style="{{ printf "background-image: linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58)), url('%s');" $imageURL | safeCSS }}"{{ end }}>
+  <div class="header-inner">
+    <div class="header-bar">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="site-name" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
+        <ul>
+          {{ range site.Menus.main }}
+            <li><a href="{{ .URL }}"{{ with .Params.rel }} rel="{{ . }}"{{ end }}>{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+      <div class="header-social">{{ partial "social-follow.html" . }}</div>
+    </div>
+    <div class="hero-copy">
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p>{{ . }}</p>{{ else }}{{ if $.IsHome }}<p>{{ site.Params.description }}</p>{{ end }}{{ end }}
+    </div>
+  </div>
+</header>

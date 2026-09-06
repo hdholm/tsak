@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="content-grid wrap">
+  <section class="article-list">
+    {{ with .Content }}<div class="prose intro home-intro">{{ . }}</div>{{ end }}
+    <h2 class="section-title">Latest Articles</h2>
+    {{ range first 6 (where site.RegularPages "Section" "articles") }}
+      <article class="post-card">
+        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        {{ partial "article-meta.html" . }}
+        <p>{{ .Summary | plainify | truncate 260 }}</p>
+        {{ partial "tags.html" . }}
+        <a class="read-more" href="{{ .RelPermalink }}">Read article →</a>
+      </article>
+    {{ end }}
+    <p><a class="all-articles" href="{{ (site.GetPage "/articles").RelPermalink }}">All articles →</a></p>
+  </section>
+  {{ partial "sidebar.html" . }}
+</div>
+{{ end }}

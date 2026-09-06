@@ -1,0 +1,56 @@
+baseURL = 'https://holmgrown.com/tsak/'
+locale = 'en-US'
+title = 'The Solutions Are Known'
+copyright = 'Howard Holm'
+defaultContentLanguage = 'en'
+enableRobotsTXT = true
+enableGitInfo = false
+
+[pagination]
+pagerSize = 9
+
+[sitemap]
+changefreq = 'monthly'
+priority = 0.5
+filename = 'sitemap.xml'
+
+[params]
+author = 'Howard Holm'
+author_url = 'https://hdholm.com/consultants/howard/'
+description = 'Solutions to problems.'
+about = "I keep notes here about potential solutions to technical, political, and social problems — mostly as a reference for myself, but hopefully some use to others."
+recent_posts_number = 4
+related_posts_number = 4
+
+[menus]
+  [[menus.main]]
+    name = 'Articles'
+    pageRef = '/articles'
+    weight = 20
+  [[menus.main]]
+    name = 'Tags'
+    pageRef = '/tags'
+    weight = 30
+  [[menus.main]]
+    name = 'HD Holm'
+    url = 'https://hdholm.com/'
+    weight = 40
+    [menus.main.params]
+      rel = 'external'
+
+[params.social]
+  mastodon = 'https://infosec.exchange/@hdholm'
+  facebook = 'https://www.facebook.com/howard.holm'
+  bluesky = 'https://bsky.app/profile/hdholm.bsky.social'
+  linkedin = 'https://www.linkedin.com/in/howardholm/'
+
+[related]
+includeNewer = true
+threshold = 20
+toLower = true
+  [[related.indices]]
+  name = 'tags'
+  weight = 100
+  [[related.indices]]
+  name = 'date'
+  weight = 10

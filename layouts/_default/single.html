@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="content-grid wrap">
+  <article class="article-content">
+    {{ partial "social-share.html" . }}
+    {{ partial "article-meta.html" . }}
+    <div class="prose">{{ .Content }}</div>
+    {{ partial "tags.html" . }}
+    <nav class="post-nav" aria-label="Article navigation">
+      <div>{{ with .PrevInSection }}<span>Older</span><a href="{{ .RelPermalink }}">← {{ .LinkTitle }}</a>{{ end }}</div>
+      <div>{{ with .NextInSection }}<span>Newer</span><a href="{{ .RelPermalink }}">{{ .LinkTitle }} →</a>{{ end }}</div>
+    </nav>
+  </article>
+  {{ partial "sidebar.html" . }}
+</div>
+{{ end }}

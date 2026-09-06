@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="content-grid wrap">
+  <section class="article-list">
+    {{ with .Content }}<div class="prose intro">{{ . }}</div>{{ end }}
+    {{ range .Paginator.Pages }}
+      <article class="post-card">
+        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        {{ partial "article-meta.html" . }}
+        <p>{{ .Summary | plainify | truncate 260 }}</p>
+        {{ partial "tags.html" . }}
+        <a class="read-more" href="{{ .RelPermalink }}">Read article →</a>
+      </article>
+    {{ else }}
+      <p>No articles yet.</p>
+    {{ end }}
+    {{ template "pagination" . }}
+  </section>
+  {{ partial "sidebar.html" . }}
+</div>
+{{ end }}
+
+{{ define "pagination" }}
+  {{ if gt .Paginator.TotalPages 1 }}
+  <nav class="pagination" aria-label="Pagination">
+    {{ with .Paginator.Prev }}<a href="{{ .URL }}">← Newer</a>{{ end }}
+    <span>Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</span>
+    {{ with .Paginator.Next }}<a href="{{ .URL }}">Older →</a>{{ end }}
+  </nav>
+  {{ end }}
+{{ end }}

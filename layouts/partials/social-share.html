@@ -1,0 +1,11 @@
+{{- $url := .Permalink -}}
+{{- $title := .Title -}}
+{{- $text := printf "%s — %s" $title $url -}}
+<div class="share-links" aria-label="Share this article">
+  <span class="share-label">Share</span>
+  <a href="mailto:?subject={{ $title | urlquery }}&amp;body={{ $url | urlquery }}" aria-label="Share by email" title="Email">{{ partial "social-icon.html" "email" }}</a>
+  <a href="https://infosec.exchange/share?text={{ $text | urlquery }}" target="_blank" rel="nofollow noopener noreferrer" aria-label="Share on Mastodon" title="Mastodon">{{ partial "social-icon.html" "mastodon" }}</a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{ $url | urlquery }}" target="_blank" rel="nofollow noopener noreferrer" aria-label="Share on Facebook" title="Facebook">{{ partial "social-icon.html" "facebook" }}</a>
+  <a href="https://bsky.app/intent/compose?text={{ $text | urlquery }}" target="_blank" rel="nofollow noopener noreferrer" aria-label="Share on Bluesky" title="Bluesky">{{ partial "social-icon.html" "bluesky" }}</a>
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ $url | urlquery }}" target="_blank" rel="nofollow noopener noreferrer" aria-label="Share on LinkedIn" title="LinkedIn">{{ partial "social-icon.html" "linkedin" }}</a>
+</div>

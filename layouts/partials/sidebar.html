@@ -1,0 +1,37 @@
+<aside class="sidebar" aria-label="Sidebar">
+  <section class="sidebar-block">
+    <h2>About</h2>
+    <p>{{ site.Params.about }}</p>
+    <p><a href="{{ (site.GetPage "/about").RelPermalink }}">More about this site →</a></p>
+  </section>
+
+  <section class="sidebar-block">
+    <h2>Recent Posts</h2>
+    <ul class="sidebar-list">
+      {{ range first (site.Params.recent_posts_number | default 4) (where site.RegularPages "Section" "articles") }}
+        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a><small>{{ .Date.Format "Jan 2, 2006" }}</small></li>
+      {{ end }}
+    </ul>
+  </section>
+
+  {{ with site.Taxonomies.tags }}
+  <section class="sidebar-block">
+    <h2>Tags</h2>
+    <div class="tag-cloud">
+      {{ range .ByCount }}<a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }} <span>{{ .Count }}</span></a>{{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{ if and .IsPage (eq .Section "articles") }}
+    {{ $related := site.RegularPages.Related . | first (site.Params.related_posts_number | default 4) }}
+    {{ with $related }}
+    <section class="sidebar-block">
+      <h2>Related Posts</h2>
+      <ul class="sidebar-list">
+        {{ range . }}<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}
+      </ul>
+    </section>
+    {{ end }}
+  {{ end }}
+</aside>

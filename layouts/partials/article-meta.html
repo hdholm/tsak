@@ -1,0 +1,4 @@
+<div class="article-meta">
+  {{ with .Date }}<time datetime="{{ .Format "2006-01-02" }}">{{ .Format "January 2, 2006" }}</time>{{ end }}
+  {{ if .WordCount }}<span>• {{ .ReadingTime }} min read</span><span>• {{ .WordCount }} words</span>{{ end }}
+</div>
