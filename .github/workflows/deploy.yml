@@ -21,10 +21,10 @@ jobs:
 
       - name: Build the site
         run: |
-          pwd
           hugo build
-          rm -f public/robots.txt
-          rm -f public/sitemap.xml
+          pwd
+          rm -fv public/robots.txt
+          rm -fv public/sitemap.xml
 
       - name: Configure SSH
         run: |
