@@ -23,8 +23,8 @@ jobs:
         run: |
           pwd
           hugo build
-          rm -f robots.txt
-          rm -f sitemap.xml
+          rm -f public/robots.txt
+          rm -f public/sitemap.xml
 
       - name: Configure SSH
         run: |
