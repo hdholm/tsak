@@ -43,6 +43,7 @@ related_posts_number = 4
   facebook = 'https://www.facebook.com/howard.holm'
   bluesky = 'https://bsky.app/profile/hdholm.bsky.social'
   linkedin = 'https://www.linkedin.com/in/howardholm/'
+  rss = 'https://holmgrown.com/tsak/articles/index.xml'
 
 [related]
 includeNewer = true
