@@ -34,7 +34,7 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           # Automatically trust the remote host to avoid prompts
-          echo ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+          echo ${{ secrets.KNOWN_HOSTS }} >> ~/.ssh/known_hosts
 
       - name: Deploy files with Rsync
         run: |
