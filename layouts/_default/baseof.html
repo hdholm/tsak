@@ -8,6 +8,7 @@
   <link rel="canonical" href="{{ .Permalink }}">
   {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ .RelPermalink }}">{{ end }}
   {{ with resources.Get "css/site.css" }}{{ $css := . | minify }}<style>{{ $css.Content | safeCSS }}</style>{{ end }}
+  {{ block "head" . }}{{ end }}
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>

@@ -1,0 +1,17 @@
+{{ define "head" }}
+  <link rel="stylesheet" href="{{ "pagefind/pagefind-component-ui.css" | relURL }}">
+  <script type="module" src="{{ "pagefind/pagefind-component-ui.js" | relURL }}"></script>
+{{ end }}
+
+{{ define "main" }}
+<div class="wrap narrow">
+  <div class="prose">
+    {{ .Content }}
+  </div>
+  <pagefind-config
+    base-url="{{ site.Home.RelPermalink }}"
+    bundle-path="{{ "pagefind/" | relURL }}">
+  </pagefind-config>
+  <pagefind-searchbox placeholder="Search articles…"></pagefind-searchbox>
+</div>
+{{ end }}

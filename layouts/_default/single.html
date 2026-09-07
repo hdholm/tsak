@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="content-grid wrap">
-  <article class="article-content">
+  <article class="article-content"{{ if eq .Section "articles" }} data-pagefind-body{{ end }}>
     {{ partial "social-share.html" . }}
     {{ partial "article-meta.html" . }}
     <div class="prose">{{ .Content }}</div>
