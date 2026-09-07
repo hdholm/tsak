@@ -23,7 +23,7 @@ jobs:
       - name: Build the site
         run: |
           pwd
-          hugo build
+          hugo
           rm -f robots.txt
           rm -f sitemap.xml
 
