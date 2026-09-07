@@ -20,7 +20,8 @@ the expense of the broader society.
 
 This site is built with [Hugo](https://gohugo.io/) and the source is available
 on [GitHub](https://github.com/hdholm/tsak/).  If you find something broken,
-or have improvements to offer submit issues or pull requests there.
+or have improvements to offer submit, you can submit issues or pull requests
+there.
 
 Credit to my friend Bob for the first version of the graphic which has only
 changed slightly.
