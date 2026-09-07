@@ -13,11 +13,16 @@ jobs:
       - name: Checkout Source Code
         uses: actions/checkout@v7
         
-      - name: Install dependencies
+      - name: Install Hugo
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
           sudo snap install hugo
+
+      - name: Set up Node.js for Pagefind
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
 
       - name: Build the site
         run: |
@@ -26,7 +31,10 @@ jobs:
           rm -fv public/robots.txt
           rm -fv public/sitemap.xml
 
-      - name: Configure SSH
+      - name: Build Pagefind search index
+        run: npx -y pagefind@1.5.2 --site public
+
+      - name: Configure SSH for rsync
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
@@ -34,9 +42,9 @@ jobs:
           # Automatically trust the remote host to avoid prompts
           echo "${{ secrets.KNOWN_HOSTS }}" >> ~/.ssh/known_hosts
 
-      - name: Deploy files with Rsync
+      - name: Deploy site with rsync
         run: |
-          rsync -avz --delete \
+          rsync -avzc --delete \
             ./public/ \
             ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:secure_html/tsak/
 
