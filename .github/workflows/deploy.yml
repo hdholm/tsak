@@ -37,6 +37,6 @@ jobs:
       - name: Deploy files with Rsync
         run: |
           rsync -avz --delete \
-            ./public/* \
+            ./public/ \
             ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:secure_html/tsak/
 
