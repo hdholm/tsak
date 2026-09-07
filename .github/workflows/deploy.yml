@@ -22,7 +22,8 @@ jobs:
 
       - name: Build the site
         run: |
-          cd tsak
+          ls -latrR .
+          cd tsak/tsak
           hugo build
           rm -f robots.txt
           rm -f sitemap.xml
