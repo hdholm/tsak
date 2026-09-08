@@ -1,6 +1,7 @@
 <footer class="site-footer">
   <div class="footer-inner">
-    <p>&copy; {{ now.Year }} {{ with site.Params.author_url }}<a href="{{ . }}">{{ site.Params.author }}</a>{{ else }}{{ site.Params.author }}{{ end }}</p>
+    <p>&copy; {{ now.Year }} {{ with site.Params.author_url }}<a href="{{ . }}">{{ site.Params.author }}</a>{{ else }}{{ site.Params.author }}{{ end }}
+    licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a><img src="{{ relURL "icons/cc.svg" }}" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="{{ relURL "icons/by.svg" }}" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="{{ relURL "icons/sa.svg" }}" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"></p>
     {{ partial "social-follow.html" . }}
   </div>
 </footer>
