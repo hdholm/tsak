@@ -1,7 +1,8 @@
 +++
 date = '2026-09-08T00:05:01-04:00'
 title = 'Decrypting Disks without Passwords on Reboot'
-tags = ['software', 'tech', 'Fedora', 'OPNsense']
+categories = ['tech']
+tags = ['software', 'Fedora', 'OPNsense']
 +++
 Like many people that you might call tech hobbiests, I have a certain number of
 servers, VMs, what have you, running in my home. A lot of those

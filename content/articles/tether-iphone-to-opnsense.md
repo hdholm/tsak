@@ -1,7 +1,8 @@
 +++
 date = '2026-09-06T14:30:06-04:00'
-title = 'Tether iPhone to OPNsense'
-tags = ['software', 'OPNsense', 'tech']
+title = 'Tether iPhone to OPNsense'                                      
+categories = ['tech']
+tags = ['software', 'OPNsense']
 +++
 Last updated for OPNsense 26.7.3_11
 

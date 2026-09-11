@@ -1,7 +1,8 @@
 +++
 date = '2026-09-06T01:20:21-04:00'
 title = 'Using Grampsweb Sync on Fedora'
-tags = ['geneaology', 'gramps', 'grampsweb', 'software', 'fedora', 'tech']
+categories = ['tech']
+tags = ['geneaology', 'gramps', 'grampsweb', 'software', 'fedora']
 +++
 When using [Grampsweb Sync](https://www.grampsweb.org/administration/sync/)
 on Fedora's GNOME desktop to keep [Gramps](https://gramps-project.org/blog/)

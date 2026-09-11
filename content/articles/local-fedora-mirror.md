@@ -1,7 +1,8 @@
 +++
 date = '2026-09-06T01:50:01-04:00'
-title = 'Local Fedora Mirror'
-tags = ['software','Fedora','tech']
+title = 'Local Fedora Mirror'                                      
+categories = ['tech']
+tags = ['software','Fedora']
 +++
 If you havve a collection of systems running Fedora and don't want waste the
 time having each system pull software updates across your Internet connection

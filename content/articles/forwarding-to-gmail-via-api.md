@@ -1,6 +1,7 @@
 +++
 date = '2026-09-07T23:05:01-04:00'
 title = 'Forwarding to GMail via API'
+categories = ['tech']
 tags = ['software', 'tech']
 +++
 Google has deprecated and is soon turning off the ability to get email from

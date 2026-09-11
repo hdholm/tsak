@@ -1,7 +1,8 @@
 +++
 date = '2026-09-07T12:49:08-04:00'
 title = 'Constructing this Site'
-tags = ['web', 'software', 'tech', 'fedora']
+categories = ['tech']
+tags = ['web', 'software', 'fedora']
 +++
 I had been considering a blog site for a while, mostly to hold information about
 things I've spent energy learning. I didn't want to have to relean those hard
