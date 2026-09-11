@@ -32,6 +32,10 @@ related_posts_number = 4
     pageRef = '/tags'
     weight = 30
   [[menus.main]]
+    name = 'Categories'
+    pageRef = '/categories'
+    weight = 35
+  [[menus.main]]
     name = 'HD Holm'
     url = 'https://hdholm.com/'
     weight = 40
@@ -52,6 +56,9 @@ toLower = true
   [[related.indices]]
   name = 'tags'
   weight = 100
+  [[related.indices]]
+  name = 'categories'
+  weight = 80
   [[related.indices]]
   name = 'date'
   weight = 10

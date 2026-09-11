@@ -7,6 +7,7 @@
         {{ partial "article-meta.html" . }}
         <p>{{ .Summary | plainify | truncate 260 }}</p>
         {{ partial "tags.html" . }}
+        {{ partial "categories.html" . }}
       </article>
     {{ end }}
   </section>

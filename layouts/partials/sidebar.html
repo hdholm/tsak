@@ -23,7 +23,16 @@
   </section>
   {{ end }}
 
-  {{ if and .IsPage (eq .Section "articles") }}
+  {{ with site.Taxonomies.categories }}
+  <section class="sidebar-block">
+    <h2>Categories</h2>
+    <div class="tag-cloud">
+      {{ range .ByCount }}<a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }} <span>{{ .Count }}</span></a>{{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+{{ if and .IsPage (eq .Section "articles") }}
     {{ $related := site.RegularPages.Related . | first (site.Params.related_posts_number | default 4) }}
     {{ with $related }}
     <section class="sidebar-block">

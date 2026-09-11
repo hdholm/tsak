@@ -9,6 +9,7 @@
         {{ partial "article-meta.html" . }}
         <p>{{ .Summary | plainify | truncate 260 }}</p>
         {{ partial "tags.html" . }}
+        {{ partial "categories.html" . }}
         <a class="read-more" href="{{ .RelPermalink }}">Read article →</a>
       </article>
     {{ end }}
