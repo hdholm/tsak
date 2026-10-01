@@ -1,5 +1,5 @@
 +++
-date = '2026-09-29T13:30:08-04:00'
+date = '2026-09-30T23:30:08-04:00'
 title = 'Quotes and Aphorisms'
 categories = ['tech']
 tags = []
@@ -42,4 +42,4 @@ find myself repeating and I wanted to keep a list somewhere convenient.
   the stormy present. The occasion is piled high with difficulty, and we must
   rise -- with the occasion. As our case is new, so we must think anew, and
   act anew. We must disenthrall ourselves, and then we shall save our country. -
-  Abraham Lincoln (Annual Message to Congress 1862)[https://www.abrahamlincolnonline.org/lincoln/speeches/congress.htm]
+  Abraham Lincoln [Annual Message to Congress 1862](https://www.abrahamlincolnonline.org/lincoln/speeches/congress.htm)
