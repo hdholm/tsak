@@ -1,7 +1,7 @@
 +++
 date = '2026-09-07T12:49:08-04:00'
 title = 'Constructing this Site'
-description = 'How this site is built: Hugo without a theme, Pagefind for search, and deployment from GitHub.'
+description = 'Why I chose Hugo for this, removed the theme, and added static search with Pagefind.'
 categories = ['tech']
 tags = ['web', 'software', 'fedora']
 +++
