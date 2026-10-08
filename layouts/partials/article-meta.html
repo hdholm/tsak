@@ -1,4 +1,5 @@
 <div class="article-meta">
   {{ with .Date }}<time datetime="{{ .Format "2006-01-02" }}">{{ .Format "January 2, 2006" }}</time>{{ end }}
+  {{ if and .IsPage .Lastmod (gt (.Lastmod.Sub .Date).Hours 48.0) }}<span>• Updated <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "January 2, 2006" }}</time></span>{{ end }}
   {{ if .WordCount }}<span>• {{ .ReadingTime }} min read</span><span>• {{ .WordCount }} words</span>{{ end }}
 </div>
