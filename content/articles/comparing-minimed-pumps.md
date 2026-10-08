@@ -22,10 +22,14 @@ algorithm updates may be available only for the Flex.
   and needs about 30 minutes a week, instead of the AA batteries the 780G uses.
 - **[+] Phone control.** It is controlled from a smartphone, so it is less
   obtrusive. You can wear it under clothing because you never need to touch it.
-- **[−] Phone only.** The Flex can *only* be controlled from a smartphone. The
-  pump itself shows nothing except LED color changes indicating the severity of
-  alarms, and there is no way to bolus or suspend delivery without the phone.
-  That can be a real problem in some environments.
+- **[−] Phone only.** The Flex can *only* be controlled from a smartphone.
+  Flex continues delivery according to its current settings and mode when it
+  doesn't have communication with the phone. SmartGuard can continue while the
+  sensor remains connected. Without the phone, however, the user cannot give
+  a manual bolus or manage alerts through the app. The pump itself shows
+  nothing except LED color changes indicating the severity of alarms which
+  must be reviewed and cleared on the phone. The necessity of the phone
+  can be a real problem in some environments.
 - **[+] Smaller.** The Flex is somewhat smaller than the 780G, although I find
   the 780G small enough, and in use the Flex does not feel much smaller.
 - **[−] Accessories.** The Flex is new. Although it is better suited to being
