@@ -57,3 +57,10 @@ options):
 ```sh
 sudo dnf --refresh install golang hugo
 ```
+
+## References
+
+- [David Straub: My new website setup](https://davidstraub.de/posts/my-new-website-setup/)
+- [Greg Vedders: Rebuilding without a Hugo theme](https://gregvedders.com/posts/rebuilding-gregvedders-com-without-a-hugo-theme/)
+- [Hugo documentation](https://gohugo.io/documentation/)
+- [Pagefind documentation](https://pagefind.app/docs/)
