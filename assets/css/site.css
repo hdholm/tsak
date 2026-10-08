@@ -623,3 +623,47 @@ svg {
     padding-bottom: 3rem;
   }
 }
+
+/* Added by site review */
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--color-link);
+  outline-offset: 2px;
+}
+
+.license-icon {
+  max-width: 1em;
+  max-height: 1em;
+  margin-left: 0.2em;
+  vertical-align: middle;
+}
+
+figure {
+  margin: 1.5rem 0;
+}
+
+figcaption {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #d9dce1;
+    --color-muted: #9aa3ae;
+    --color-border: #2c3036;
+    --color-surface: #16181b;
+    --color-surface-muted: #1d2024;
+    --color-link: #6cb4ee;
+  }
+}

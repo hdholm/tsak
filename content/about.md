@@ -1,12 +1,12 @@
 ---
 title: "About"
 description: "Keeping a collection of solutions for things technical as well as social. You are welcome to follow along."
-featured_image: '/images/HowardComplains.png'
+featured_image: "/images/HowardComplains.webp"
 menu:
   main:
     weight: 10
 ---
-{{< figure src="/tsak/images/HowardComplains.png" title="Howard complaining about solutions existing but not being used." >}}
+{{< staticfig src="images/HowardComplains.webp" title="Howard complaining about solutions existing but not being used." >}}
 
 This site is where I keep notes about solutions I've found to various technical
 problems, as well as solutions for various political and social ills.  I keep
@@ -20,7 +20,7 @@ the expense of the broader society.
 
 This site is built with [Hugo](https://gohugo.io/) and the source is available
 on [GitHub](https://github.com/hdholm/tsak/).  If you find something broken,
-or have improvements to offer submit, you can submit issues or pull requests
+or have improvements to offer, you can submit issues or pull requests
 there.
 
 Credit to my friend Bob for the first version of the graphic which has only

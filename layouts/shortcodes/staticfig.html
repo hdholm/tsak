@@ -1,0 +1,6 @@
+{{- /* Figure for a file under static/, honoring the site's base path.
+       Usage: {{< staticfig src="images/foo.webp" title="Caption" alt="Description" >}} */ -}}
+<figure>
+  <img src="{{ .Get "src" | relURL }}" alt="{{ .Get "alt" | default (.Get "title") }}" loading="lazy">
+  {{ with .Get "title" }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

@@ -1,39 +1,49 @@
 +++
 date = '2026-09-07T12:49:08-04:00'
 title = 'Constructing this Site'
+description = 'How this site is built: Hugo without a theme, Pagefind for search, and deployment from GitHub.'
 categories = ['tech']
 tags = ['web', 'software', 'fedora']
 +++
-I had been considering a blog site for a while, mostly to hold information about
-things I've spent energy learning. I didn't want to have to relean those hard
-fought bits of knowledge the next time I needed them so I had a private
-collection of notes. By nature, I believe sharing is a good thing, and wanted
-to make those bits of knowledge available to anyone else who might find them
-useful.
+I had been considering a blog for a while, mostly to hold what I have learned
+about various things. I did not want to relearn those hard-won bits of
+knowledge the next time I needed them, so I kept a private collection of
+notes. I also believe sharing is a good thing, and I wanted to make those
+notes available to anyone who might find them useful.
 
-In working with [Gramps](https://gramps-project.org/) I was aware of one of the
-developers, David Straub, and when he [revamped his personal website](https://davidstraub.de/posts/my-new-website-setup/)
-I learned of [Hugo](https://gohugo.io/) which met my list of criteria for a
-system to maintain a blog, which was somewhat similar to Dr. Straub's.  I
-initially utilized the [Ananke](https://github.com/gohugo-ananke/ananke) theme.
-While I liked that theme, I stumbled on
-[Rebuilding gregvedders.com Without a Hugo Theme](https://gregvedders.com/posts/rebuilding-gregvedders-com-without-a-hugo-theme/)
-which was very close to what I was doing already.  I learned about Pagefind
-there and was inspired to also simplify what I was doing by removing the theme,
-which while nice, added a lot of features and complexity I wasn't using and
-didn't need. So with a little help from ChatGPT I reworked the site to
-use Hugo without an external theme.  The layouts and CSS are kept directly
-in this repository so the site only carries the pieces it actually uses.
+While working with [Gramps](https://gramps-project.org/), I became aware of
+one of its developers, David Straub. When he
+[revamped his personal website](https://davidstraub.de/posts/my-new-website-setup/),
+I learned of [Hugo](https://gohugo.io/), which met my list of criteria for a
+blog system and was similar to what he described.
 
-The site uses ordinary Hugo templates under `layouts/` and a small stylesheet
-under `assets/css/`. See the [Hugo documentation](https://gohugo.io/documentation/)
-for the templating and content model.
+I started with the [Ananke](https://github.com/gohugo-ananke/ananke) theme.
+I liked it, but then I came across Greg Vedders's
+[Rebuilding gregvedders.com Without a Hugo Theme](https://gregvedders.com/posts/rebuilding-gregvedders-com-without-a-hugo-theme/),
+which was very close to what I was already doing. I learned about
+[Pagefind](https://pagefind.app/) there and was inspired to simplify by
+dropping the theme, which added features and complexity I neither used nor
+needed. With some help from ChatGPT, I reworked the site to use Hugo without an
+external theme. The layouts and CSS live directly in this repository, so the
+site carries only the pieces it uses.
 
-I added [pagefind](https://pagefind.app/) which provides a search index while
-still maintaining a static site.  Everything is available on [GitHub](https://github.com/hdholm/tsak)
-for anyone wanting a closer look at the details
+## How it fits together
 
-Hugo is available in the Fedora repos
-```
+- **Templates and styling.** Ordinary Hugo templates under `layouts/` and a
+  small stylesheet under `assets/css/`. The
+  [Hugo documentation](https://gohugo.io/documentation/) covers the templating
+  and content model.
+- **Search.** Pagefind builds a search index at deploy time, which provides
+  search while keeping the site completely static.
+- **Source.** Everything is on [GitHub](https://github.com/hdholm/tsak) if you
+  want a closer look.
+
+## Installing Hugo on Fedora
+
+Hugo is available in the Fedora repositories (see Hugo's
+[Linux installation notes](https://gohugo.io/installation/linux/) for other
+options):
+
+```sh
 sudo dnf --refresh install golang hugo
 ```

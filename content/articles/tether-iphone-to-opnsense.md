@@ -1,66 +1,89 @@
 +++
 date = '2026-09-06T14:30:06-04:00'
-title = 'Tether iPhone to OPNsense'                                      
+title = 'Tether iPhone to OPNsense'
+description = 'Using a spare tethering iPhone as a backup WAN for an OPNsense firewall, including the usbmuxd and ipheth setup.'
 categories = ['tech']
-tags = ['software', 'OPNsense']
+tags = ['software', 'opnsense', 'networking']
 +++
-Last updated for OPNsense 26.7.3_11
+*Last updated for OPNsense 26.7.3_11.*
 
-If you have an OPNsense firewall and you also happen to have a spare iPhone
-around with a cell plan that enables tethering, you can use the iPhone to
-connect your router to the cell network as it's WAN.  This can be particularly
-useful in longer network outages due to, for example, a hurricane taking down
-Xfinity in your area for more than a week. Just an example. Anyway there are
-some hurdles. Of course, it's best to configure this BEFORE you need it.  Once
-there's a network outage it's tricky to download the things you need to set
-this up as your backup plan.
+If you have an [OPNsense](https://opnsense.org/) firewall and a spare iPhone on
+a cell plan that allows tethering, you can use the phone as the firewall's WAN
+connection to the cell network. This is handy in a long outage, for example a
+hurricane taking down your cable provider for more than a week. (Just an
+example.)
 
-The first thing to note is [this bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289455).
-As of OPNsense 26.7.3_11 it is not yet fixed in OPNsense. So the workaround to
-install anything you need from the FreeBSD repos below is to lock the package
-manager so that it's not upgraded as a side effect of using the FreeBSD repos
-and enable the FreeBSD repo and then undo all those changes.
+There are some hurdles, and it is best to configure all of this *before* you
+need it. During an outage it is hard to download the things you need.
+
+## Install usbmuxd
+
+The iPhone is handled by FreeBSD's
+[`ipheth`](https://man.freebsd.org/cgi/man.cgi?query=ipheth) driver together
+with [`usbmuxd`](https://github.com/libimobiledevice/usbmuxd), and `usbmuxd`
+is only in the FreeBSD package repository, not OPNsense's.
+
+The first thing to know is [this bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289455).
+As of OPNsense 26.7.3_11 it is not fixed in OPNsense. The workaround is to lock
+the package manager so it is not upgraded as a side effect of using the
+FreeBSD repository, enable that repository, install, and then undo the changes:
+
 ```sh
 kldload ipheth
-pkg lock pkg # to prevent upgreading pkg while using the FreeBSD repo
+pkg lock pkg                 # prevent upgrading pkg while using the FreeBSD repo
 vi /usr/local/etc/pkg/repos/FreeBSD.conf
-# Change FreeBSD: { enabled: no }
-# to     FreeBSD: ( enabled: yes}
+# Change    FreeBSD: { enabled: no }
+# to        FreeBSD: { enabled: yes }
 
 pkg install usbmuxd
 pkg unlock pkg
 vi /usr/local/etc/pkg/repos/FreeBSD.conf
-# Change FreeBSD: { enabled: no }                                               
-# to     FreeBSD: ( enabled: yes}                                               
-``` 
-Once that bug is fixed in OPNsense you can do the much simpler
+# Change    FreeBSD: { enabled: yes }
+# back to   FreeBSD: { enabled: no }
+```
+
+Once the bug is fixed in OPNsense, this simplifies to:
+
 ```sh
 kldload ipheth
 pkg install -r FreeBSD usbmuxd
 ```
-It's possible at this point that things are working, but if not you may need
-to help things along.
+
+## Getting the phone recognized
+
+Everything may work at this point. If not, you may need to help it along. Find
+the phone's USB device number, then set its configuration (see
+[`usbconfig(8)`](https://man.freebsd.org/cgi/man.cgi?query=usbconfig)) and start
+`usbmuxd`:
+
 ```sh
-dmesg | grep apple # to get the ugen number (where 0.2 is the example below)
+dmesg | grep -i apple        # find the ugen number; 0.2 is used as the example below
 usbconfig -d 0.2 set_config 3
 usbmuxd --enable-exit --user root
 ```
 
-Once you have it working you will probably want to make it persistent on
-reboots.  In `/boot/loader.conf.local` add
+## Making it persistent
+
+To load the driver at every boot, add this to `/boot/loader.conf.local`:
+
 ```sh
-if_ipheth_load="YES" 
+if_ipheth_load="YES"
 ```
-If usbmuxd needed configuration, you may need to create
-`/usr/local/etc/rc.syshook.d/early/tether.sh` and make it executable
-`chmod +x /usr/local/etc/rc.syshook.d/early/tether.sh` containing the
-following to make it persistent.  Ideally this is not necessary as
-`/usr/local/etc/devd/usbmuxd.conf` should handle starting and configuring.
+
+If `usbmuxd` needed manual configuration, you may also need a boot-time script.
+Create `/usr/local/etc/rc.syshook.d/early/tether.sh`, make it executable with
+`chmod +x`, and put this in it, using the device number you found earlier:
+
 ```sh
-usbconfig -d 0.2 set_config 3 # where 0.2 is the number found earlier
+usbconfig -d 0.2 set_config 3
 usbmuxd --enable-exit --user root
 ```
 
-See Also
-========
-[Related discussion for pfSense](https://forum.netgate.com/topic/106435/iphone-tether/2)
+Ideally this is unnecessary, since `/usr/local/etc/devd/usbmuxd.conf`, installed
+with the package, should start and configure `usbmuxd` when the phone is
+attached. Note that the device number can change if you plug the phone into a
+different USB port.
+
+## See also
+
+- [Related discussion for pfSense](https://forum.netgate.com/topic/106435/iphone-tether/2)

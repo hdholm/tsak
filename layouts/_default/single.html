@@ -1,3 +1,5 @@
+{{ define "head" }}{{ if eq .Section "articles" }}{{ partial "jsonld.html" . }}{{ end }}{{ end }}
+
 {{ define "main" }}
 <div class="content-grid wrap">
   <article class="article-content"{{ if eq .Section "articles" }} data-pagefind-body{{ end }}>

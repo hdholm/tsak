@@ -1,29 +1,39 @@
 +++
 date = '2026-09-06T01:20:21-04:00'
-title = 'Using Grampsweb Sync on Fedora'
+title = 'Using Gramps Web Sync on Fedora'
+description = 'Making Gramps Web Sync store its password in the GNOME keyring on Fedora by configuring Python keyring.'
 categories = ['tech']
-tags = ['geneaology', 'gramps', 'grampsweb', 'software', 'fedora']
+tags = ['genealogy', 'gramps', 'gramps-web', 'software', 'fedora']
 +++
-When using [Grampsweb Sync](https://www.grampsweb.org/administration/sync/)
-on Fedora's GNOME desktop to keep [Gramps](https://gramps-project.org/blog/)
-and a [GrampsWeb](https://www.grampsweb.org/) tree in sync it is helpful for
-the GNOME password manager to remember the password. Unfortunately, this is
-not entirely straightforward.  You need to install python3-keyring to allow
-saving of grampsweb sync password, but it defaults to using kwallet even if
-GNOME is the default desktop. This is documented in
-[this bug](https://github.com/jaraco/keyring/issues/496). This requires
-the following workaround:
+When using [Gramps Web Sync](https://www.grampsweb.org/administration/sync/) on
+Fedora's GNOME desktop to keep [Gramps](https://gramps-project.org/blog/) and a
+[Gramps Web](https://www.grampsweb.org/) tree in sync, it helps to let the
+GNOME password manager remember the password. That is not entirely
+straightforward. You need the Python
+[keyring](https://keyring.readthedocs.io/) library to save the sync password,
+but it defaults to the KWallet backend even when GNOME is the default desktop.
+This is tracked in [this bug](https://github.com/jaraco/keyring/issues/496).
 
-1. Make sure the Python packages secretstorage and python3-keyring are installed.
-2. Create the configuration file ~/.config/python_keyring/keyringrc.cfg to
-   set the default keyring to keyring.backends.SecretService.Keyring
+The workaround:
+
+1. Install `python3-keyring` and `python3-secretstorage`.
+2. Create `~/.config/python_keyring/keyringrc.cfg` to make the
+   [Secret Service](https://specifications.freedesktop.org/secret-service-spec/latest/)
+   backend (which GNOME Keyring implements) the default, as described in the
+   keyring documentation on
+   [configuring a backend](https://keyring.readthedocs.io/en/latest/#configuring).
 
 ```sh
 sudo dnf --refresh install python3-secretstorage python3-keyring
-sudo echo > ~/.config/python_keyring/keyringrc.cfg <<EOF
+mkdir -p ~/.config/python_keyring
+cat > ~/.config/python_keyring/keyringrc.cfg <<'CFG'
 [backend]
 default-keyring=keyring.backends.SecretService.Keyring
-EOF
+CFG
 ```
-This has now been documented on the Grampsweb Sync installation instructions
-so hopefully this article is already obsolete.
+
+Run the `mkdir` and `cat` commands as your own user, not with `sudo`, since the
+file belongs in your home directory.
+
+This is now documented in the Gramps Web Sync installation instructions, so
+with luck this article is already obsolete.

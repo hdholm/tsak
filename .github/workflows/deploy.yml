@@ -1,23 +1,30 @@
-name: Deploy via SCP
+name: Deploy via rsync
 
 on:
   push:
     branches:
       - main  # Trigger deployment when pushing to the main branch
 
+env:
+  HUGO_VERSION: 0.162.1   # keep in step with the Hugo you develop with (`hugo version`)
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout Source Code
         uses: actions/checkout@v7
-        
+        with:
+          fetch-depth: 0   # full history so Hugo can compute per-page "last updated" dates
+
       - name: Install Hugo
-        env:
-          DEBIAN_FRONTEND: noninteractive
         run: |
-          sudo snap install hugo
+          curl -fsSL -o hugo.tar.gz \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          mkdir -p "$HOME/bin"
+          tar -xzf hugo.tar.gz -C "$HOME/bin" hugo
+          echo "$HOME/bin" >> "$GITHUB_PATH"
 
       - name: Set up Node.js for Pagefind
         uses: actions/setup-node@v7
@@ -26,25 +33,32 @@ jobs:
 
       - name: Build the site
         run: |
-          hugo build
-          pwd
-          rm -fv public/robots.txt
-          rm -fv public/sitemap.xml
+          hugo version
+          hugo build --minify --baseURL "https://holmgrown.com/tsak/"
+          # robots.txt and sitemap.xml are now deployed (see layouts/robots.txt)
 
       - name: Build Pagefind search index
         run: npx -y pagefind@1.5.2 --site public
 
-      - name: Configure SSH for rsync
+      - name: Check for local-development leftovers
         run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          if grep -rIl "localhost:1313\|livereload" public; then
+            echo "Development URLs found in build output" >&2
+            exit 1
+          fi
+
+      - name: Configure SSH for rsync
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          KNOWN_HOSTS: ${{ secrets.KNOWN_HOSTS }}
+        run: |
+          install -d -m 700 ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          # Automatically trust the remote host to avoid prompts
-          echo "${{ secrets.KNOWN_HOSTS }}" >> ~/.ssh/known_hosts
+          printf '%s\n' "$KNOWN_HOSTS" >> ~/.ssh/known_hosts
 
       - name: Deploy site with rsync
         run: |
           rsync -avzc --delete \
             ./public/ \
             ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:secure_html/tsak/
-

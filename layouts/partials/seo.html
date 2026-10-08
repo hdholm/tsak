@@ -1,0 +1,10 @@
+{{- $desc := .Description | default .Summary | default site.Params.description | plainify | truncate 200 -}}
+{{- $image := .Param "featured_image" | default (index (site.Params.images | default slice) 0) -}}
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:type" content="{{ if and .IsPage (eq .Section "articles") }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ with $image }}<meta property="og:image" content="{{ strings.TrimPrefix "/" . | absURL }}">{{ end }}
+{{ if and .IsPage (eq .Section "articles") }}<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
+<meta name="twitter:card" content="summary">

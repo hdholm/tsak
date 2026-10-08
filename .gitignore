@@ -1,3 +1,4 @@
-.git
-.github
-public/*
+# Hugo output and caches
+/public/
+/resources/
+.hugo_build.lock
