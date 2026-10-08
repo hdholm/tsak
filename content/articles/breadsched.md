@@ -43,3 +43,8 @@ aren't signed yet and the best way to keep up is probably with a python
 development environment.  So I wouldn't recommend it for anyone without a little
 bit of technical skill yet.  But that said, feedback at this point is very much
 welcome.
+
+- [BreadSched project overview](https://github.com/hdholm/BreadSched/blob/main/README.md)
+- [BreadSched user guide](https://github.com/hdholm/BreadSched/blob/main/src/breadsched/USER_GUIDE.md)
+- [BreadSched roadmap](https://github.com/hdholm/BreadSched/blob/main/ROADMAP.md)
+
