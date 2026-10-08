@@ -12,9 +12,6 @@ to mean it no longer pretends to avoid it. We have watched Google
 [enshittify](https://pluralistic.net/2023/01/21/potemkin-ai/#hey-guys) its
 search engine, and now it is working on Gmail.
 
-<!-- TODO: add a link to the article about Google Search that the original
-     draft referred to as "ref article". -->
-
 ## The way things were
 
 It was (and for the moment still is) possible to set up a Gmail account to
@@ -35,9 +32,9 @@ domain receives.
 
 ## They made it worse
 
-Google announced it was removing the POP fetching service. You can still
-forward mail to your Gmail account, but that has all the problems described
-above. That led me to write
+Google [announced](https://support.google.com/mail/answer/16604719) it was
+removing the POP fetching service. You can still forward mail to your Gmail
+account, but that has all the problems described above. That led me to write
 [gmailSender](https://github.com/hdholm/gmailSender), which uses the
 [Gmail API](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/import)
 to insert mail directly into your account from a domain server. It is
@@ -46,17 +43,14 @@ It can be fairly involved to set up. I have tried to make the README clear, but
 it still takes some technical knowledge to get gmailSender working for a given
 domain.
 
-<!-- TODO: link Google's announcement of the POP/Gmailify change. -->
-
 ## They really made it worse
 
-It has become apparent that Gmail intends, in the near future, to remove not
-only POP fetching but also the send-as ability. You will no longer be able to
-use Gmail to reply to mail received at another domain *as* that domain. Your
-mail will come from Gmail, and unless you use a gmail.com address or host all
-your domain's mail on Google, you will break SPF, DKIM, and DMARC alignment.
-
-<!-- TODO: link Google's announcement of the send-as / SMTP change and its date. -->
+It has become apparent that [Gmail intends](https://support.google.com/mail/answer/17101213),
+as of 2027 to remove not only POP fetching but also the send-as ability. You
+will no longer be able to use Gmail to reply to mail received at another domain
+*as* that domain. Your mail will come from Gmail, and unless you use a gmail.com
+address or host all your domain's mail on Google, you will break SPF, DKIM, and
+DMARC alignment.
 
 ## Why do this?
 
