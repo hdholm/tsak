@@ -32,10 +32,10 @@ be possible to use your Gmail account as your primary interface to reading and
 input, either as a single message or in mbox format, and inserts it into a
 Gmail account using the
 [Gmail API](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/import).
-You need API access to the destination account, so this is not a way to send
-email to anyone. It is a way to deliver mail you receive somewhere else, such
-as on a personal domain, into your own Gmail account, or into the account of
-someone willing to authorize writing to their mailbox directly.
+This is mailbox delivery, not a way to send mail to arbitrary recipients. The
+destination account must grant OAuth access. A server for my own domain can
+receive a message and pass it to the script, which imports it into an Oauth
+authorized Gmail mailbox.
 
 Later this year Google will likely also disable sending mail through a remote
 server ("send mail as"). Once that happens you will no longer be able to reply
