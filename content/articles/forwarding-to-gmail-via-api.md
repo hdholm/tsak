@@ -1,48 +1,66 @@
 +++
 date = '2026-09-07T23:05:01-04:00'
-title = 'Forwarding to GMail via API'
+title = 'Forwarding to Gmail via API'
+description = 'gmailSender, a small Python tool that inserts mail from your own domain directly into Gmail through the API.'
 categories = ['tech']
-tags = ['software', 'tech']
+tags = ['software', 'email', 'python']
 +++
-Google has deprecated and is soon turning off the ability to get email from
-other servers via POP (and despite what you may have thought has apparently
-never used IMAP.) Forwarding messages via SMTP causes all kinds of issues
-including, but not limited to DKIM, SPF, and DMARC failures.  So I turned to
-their API and after a little (more than I wanted) research I came up with a
-modest python script to deal with it.
+Google is deprecating, and will [soon turn off](https://support.google.com/mail/answer/16604719),
+Gmail's ability to fetch mail from other servers via POP. (Despite what you may
+have thought, Gmail has apparently never supported fetching over IMAP.) In
+an update, covered in the link above, Google has extended this deprecation to
+it's *send-as* feature as well.  So while this tool will still work, it won't
+be possible to use your Gmail account as your primary interface to reading and
+*responding* to email at another domain.
+Forwarding by SMTP is not a good substitute: forwarded messages commonly fail
+[SPF](https://www.rfc-editor.org/rfc/rfc7208),
+[DKIM](https://www.rfc-editor.org/rfc/rfc6376), and
+[DMARC](https://www.rfc-editor.org/rfc/rfc7489) checks, because the forwarding
+server is no longer an authorized sender for the original domain. (The
+[ARC](https://www.rfc-editor.org/rfc/rfc8617) protocol exists to soften this,
+but it depends on the receiving side trusting you.) So I turned to Gmail's API,
+and after a little more research than I wanted, I wrote a modest Python script.
 
-### gmailSender
+In [an updatex](https://support.google.com/mail/answer/17101213)
+Google has extended this [enshittification]({{< relref "gmail-enshittification" >}}) to
+it's *send-as* feature as well.  So while this tool will still work, it won't
+be possible to use your Gmail account as your primary interface to reading and
+*responding* to email at another domain.
+## gmailSender
 
-[gmailSender](https://github.com/hdholm/gmailSender) takes email on it's
-standard input, either in mbox format or a single message and sends it to
-a GMail account.  You have to have API access to the account, so it's not a
-way to send email, it's a way to send email from an account you have somewhere
-(like a personal domain) to your own GMail account - or at least an account of
-someone willing to authorize writing to their e-mail directly.
+[gmailSender](https://github.com/hdholm/gmailSender) reads email on standard
+input, either as a single message or in mbox format, and inserts it into a
+Gmail account using the
+[Gmail API](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/import).
+You need API access to the destination account, so this is not a way to send
+email to anyone. It is a way to deliver mail you receive somewhere else, such
+as on a personal domain, into your own Gmail account, or into the account of
+someone willing to authorize writing to their mailbox directly.
 
-It seems that later this year Google will likely ALSO disable the ability to
-send email via a remote server. So the ability to reply directly from GMail to
-email that you have forwarded from another server will be eliminated. This
-seems to be yet another example of [Enshitification](https://us.macmillan.com/books/9780374619329/enshittification/)
-which seems to be ["The way of things"](https://pluralistic.net/2024/04/04/teach-me-how-to-shruggie/#kagi) at Google.
+Later this year Google will likely also disable sending mail through a remote
+server ("send mail as"). Once that happens you will no longer be able to reply
+from Gmail as an address hosted elsewhere. This is yet another example of
+[enshittification](https://us.macmillan.com/books/9780374619329/enshittification/),
+which seems to be ["the way of things"](https://pluralistic.net/2024/04/04/teach-me-how-to-shruggie/#kagi)
+at Google. I wrote more about that in
+[Gmail Enshittification]({{< relref "gmail-enshittification" >}}).
 
-### Credits
+## Credits
 
-- While seaching for a way to send email to Google, I found **Jeremy Ephron
-  Barenholtz**'s github repository at
-  https://github.com/jeremyephron/simplegmail which provided
-  some insight into the gmail API and the genesis of this idea.
-- **Anthropic's Claude AI** provided two proof of concept attempts that were
-  close to functional and provided even more insight into the operation of the
-  gmail API, but were broken in various ways.  Claude was also used to update
-  to help update to the more modern EmailMessage class in python which fixed
-  a number of the bugs in the previous Claude versions.
-- Claude attempted to build a version that took both
-  single messages and multiple message mboxen on standard input.  Unfortunately,
-  it did that by using python 2's PortableUnixMailbox. But Python 3's mbox uses
-  a pathname not a file-like-object. **Enrico Zini** seems to have a way
-  forward around that in this blog:
-  https://www.enricozini.org/blog/2019/debian/python-hacks-opening-a-compressed-mailbox/
-  although it turns out reading raw bytes and then using the modern `EmailMessage`
-  class with `email.policy.default` is much more straightforward and less
-  fragile.
+- While searching for a way to get mail into Google, I found Jeremy Ephron's
+  [simplegmail](https://github.com/jeremyephron/simplegmail) repository, which
+  gave me some insight into the Gmail API and was the genesis of this idea.
+- Anthropic's Claude produced two proof-of-concept attempts that were close to
+  working and taught me more about the Gmail API, but were broken in various
+  ways. Claude also helped move the code to Python's more modern
+  [`EmailMessage`](https://docs.python.org/3/library/email.message.html)
+  class, which fixed several bugs in the earlier versions.
+- Claude also tried to build a version that accepted both single messages and
+  multi-message mboxes on standard input. It did so with Python 2's
+  `PortableUnixMailbox`, but Python 3's
+  [`mailbox.mbox`](https://docs.python.org/3/library/mailbox.html) takes a
+  path, not a file-like object. Enrico Zini has a way around that in
+  [Python hacks: opening a compressed mailbox](https://www.enricozini.org/blog/2019/debian/python-hacks-opening-a-compressed-mailbox/).
+  In the end, reading raw bytes and parsing them with `EmailMessage` and
+  [`email.policy.default`](https://docs.python.org/3/library/email.policy.html)
+  turned out to be much more straightforward and less fragile.
