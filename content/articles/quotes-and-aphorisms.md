@@ -74,19 +74,20 @@ I could, I have noted a source.
 
 ## Music
 
-- The sun is the same in a relative way
-  But you're older
-  Shorter of breath
-  And one day closer to death
-  Every year is getting shorter
-  Never seem to find the time
-  Plans that either come to naught
+- The sun is the same in a relative way  
+  But you're older  
+  Shorter of breath  
+  And one day closer to death  
+  Every year is getting shorter  
+  Never seem to find the time  
+  Plans that either come to naught  
   Or half a page of scribbled lines. - Pink Floyd, [*Time*](https://www.youtube.com/watch?v=mi8LoDMW09Q)
 
 - Be more heart, and less attack - NEEDTOBREATHE, [*More Heart, Less Attack*](https://m.youtube.com/watch?v=_KEPEI5hzOs&ra=m)
 
 - Did you exchange a walk on part in the war for a lead role in a cage - Pink
-  Floyd [*Wish You Were Here](https://www.youtube.com/watch?v=Yi8EjAHoIjM)
+  Floyd [*Wish You Were Here*](https://www.youtube.com/watch?v=Yi8EjAHoIjM)
+
 ## History
 
 - We can succeed only by concert. It is not "can any of us imagine better?"
