@@ -14,6 +14,8 @@ I could, I have noted a source.
 - Bad news doesn't get better with age.
 - When you're in a hole, stop digging.
 - It's never the crime, it's the cover-up.
+- The question is never "how do they get away with that," the question is "how
+  do I get in on that." - a favorite of an old colleague of mine.
 - You can't save people from themselves.
 - If you are not willing to learn, no one can help you. If you are determined
   to learn, no one can stop you.
@@ -58,6 +60,33 @@ I could, I have noted a source.
   Marcus Cole to Dr. Franklin, in "A Late Delivery from Avalon" (*Babylon 5*,
   season 3).
 
+- "Decisions are made by those who show up." - President Bartlett, [*The West
+   Wing*](https://www.youtube.com/watch?v=XVwBD3Ced40&t=56s) (written by Aaron Sorkin)
+
+- "Just stand there in your wrongness and be wrong and get used to it." President
+   Bartlett, [*The West Wing*](https://www.youtube.com/watch?v=Apqk2hvN3Vc&t=2s)
+   (written by Aaron Sorkin)
+
+- "There's literally no one in the world that I don't hate right now." -
+   Toby Zigler, [*The West Wing*](https://www.youtube.com/watch?v=dtKt2YJOnLA)
+   (written by Aaron Sorkin) 
+
+
+## Music
+
+- The sun is the same in a relative way
+  But you're older
+  Shorter of breath
+  And one day closer to death
+  Every year is getting shorter
+  Never seem to find the time
+  Plans that either come to naught
+  Or half a page of scribbled lines. - Pink Floyd, [*Time*](https://www.youtube.com/watch?v=mi8LoDMW09Q)
+
+- Be more heart, and less attack - NEEDTOBREATHE, [*More Heart, Less Attack*](https://m.youtube.com/watch?v=_KEPEI5hzOs&ra=m)
+
+- Did you exchange a walk on part in the war for a lead role in a cage - Pink
+  Floyd [*Wish You Were Here](https://www.youtube.com/watch?v=Yi8EjAHoIjM)
 ## History
 
 - We can succeed only by concert. It is not "can any of us imagine better?"
@@ -66,3 +95,7 @@ I could, I have noted a source.
   rise — with the occasion. As our case is new, so we must think anew, and act
   anew. We must disenthrall ourselves, and then we shall save our country.  —
    Abraham Lincoln, [Annual Message to Congress, December 1, 1862](https://www.abrahamlincolnonline.org/lincoln/speeches/congress.htm)
+
+- "I hold it that a little rebellion now and then is a good thing, and as
+  necessary in the political world as storms in the physical." -
+  [Thomas Jefferson](https://www.monticello.org/encyclopedia/a-little-rebellionquotation)
