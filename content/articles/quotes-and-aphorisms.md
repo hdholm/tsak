@@ -40,6 +40,9 @@ I could, I have noted a source.
 - "I must be willing to give up what I am in order to become what I will be." —
   Commonly attributed to Albert Einstein
 
+- "Politicians and diapers must be changed often, and for the same reason," -
+  [Definitely not Mark Twain](https://www.reuters.com/article/fact-check/quote-comparing-politicians-and-diapers-falsely-attributed-to-mark-twain-idUSL1N2P21VE/)
+
 ## Literature and television
 
 - "He who fights with monsters should be careful lest he thereby become a
