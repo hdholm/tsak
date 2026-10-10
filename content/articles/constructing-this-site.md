@@ -58,6 +58,16 @@ options):
 sudo dnf --refresh install golang hugo
 ```
 
+## Making it automated
+
+Once the site was functioning well, making it easy to update was the next
+priority. This is pretty straightforward from a technical standpoint. Manage
+the whole site with [git](https://git-scm.com/) version control, commiting
+changes to [GitHub](https://github.com) and use GitHub's continuous integration
+(CI) model use a GitHub action to build and
+[rsync](https://en.wikipedia.org/wiki/Rsync) the site whenever changes are pushed to
+GitHub.
+
 ## References
 
 - [David Straub: My new website setup](https://davidstraub.de/posts/my-new-website-setup/)
