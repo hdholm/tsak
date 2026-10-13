@@ -1,13 +1,13 @@
 +++
 date = '2026-09-30T23:30:08-04:00'
 title = 'Quotes and Aphorisms'
-description = 'A collection of quotes and aphorisms I find myself repeating, with notes on where they actually come from.'
+description = 'A collection of quotes and aphorisms I find myself revisiting, with sources when available.'
 categories = ['tech']
 tags = ['quotes']
 +++
-Perhaps a silly article, but there are a number of quotes and aphorisms that I
-find myself repeating, and I wanted to keep a list somewhere convenient. Where
-I could, I have noted a source.
+Perhaps not technically a solutions article, but there are a number of quotes
+and aphorisms that I find myself revisiting, and I wanted to keep a list
+somewhere convenient. You can read along. Where I could, I have noted a source.
 
 ## Aphorisms
 
@@ -24,7 +24,7 @@ I could, I have noted a source.
   [Wikiquote page](https://en.wikiquote.org/wiki/George_Bernard_Shaw) tracks
   attribution questions.)*
 
-## Mark Twain, and some that are not
+## Mark Twain, and Some That Could Be But Are Mot
 
 - "Reader, suppose you were an idiot. And suppose you were a member of
   Congress. But I repeat myself." — Mark Twain, attributed; see
@@ -40,10 +40,30 @@ I could, I have noted a source.
 - "I must be willing to give up what I am in order to become what I will be." —
   Commonly attributed to Albert Einstein
 
+- "Do not put off until tomorrow what can be put off till day-after-tomorrow
+  just as well." - [Mark Twain](https://www.twainquotes.com/Procrastination.html)
+
 - "Politicians and diapers must be changed often, and for the same reason," -
   [Definitely not Mark Twain](https://www.reuters.com/article/fact-check/quote-comparing-politicians-and-diapers-falsely-attributed-to-mark-twain-idUSL1N2P21VE/)
 
-## Literature and television
+## Other Notable Personalities
+
+- “War is the province of uncertainty; three-fourths of the things on which
+  action in war is based lie hidden in the fog of uncertainty.” - [Carl von
+  Clausewitz](https://freakonomics.com/2010/07/quotes-uncovered-fog-of-war-and-showing-up/)
+
+- “Never think that war, no matter how necessary, nor how justified, is not a
+  crime.” - Ernest Hemingway, ["Treasury of the Free World". Book by Ben
+  Raeburn. Introduction to the book, 1946.](https://www.azquotes.com/quote/815663)
+
+- "Don't hit at all if it is honorably possible to avoid hitting; but never
+  hit softly" - Theodore Roosevelt, [Theodore Roosevelt: an Autobiography
+  (1913)](https://kwize.com/quote/3485)
+
+- "Occasionally he stumbled over the truth, but hastily picked himself up and
+  hurried on as if nothing had happened." - [Winston Churchill](https://quoteinvestigator.com/2012/05/26/stumble-over-truth/)
+
+## Literature and Television
 
 - "He who fights with monsters should be careful lest he thereby become a
   monster. And if thou gaze long into an abyss, the abyss will also gaze into
@@ -74,6 +94,9 @@ I could, I have noted a source.
    Toby Zigler, [*The West Wing*](https://www.youtube.com/watch?v=dtKt2YJOnLA)
    (written by Aaron Sorkin) 
 
+- "A day can really slip by when you're deliberately avoiding what you're
+  supposed to do." - Bill Watterson, There's Treasure Everywhere (Calvin and
+  Hobbes, #10)
 
 ## Music
 
