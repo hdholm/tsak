@@ -1,6 +1,5 @@
 +++
 date = '2026-10-11T20:59:14-04:00'
-draft = true
 title = 'Healthcare'
 description = 'Moving from sick care to healthcare through universal coverage and properly funded primary care'
 categories = ['public-policy']
@@ -191,7 +190,7 @@ shouldn't depend on whether denying, delaying, or complicating their
 treatment helps someone else's bottom line. A 2022 HHS Inspector
 General study found some Medicare Advantage prior-authorization
 denials met Medicare coverage rules.[^denials] This demonstrates some
-difference between the govenment plan and the commercial for-profit
+difference between the government plan and the commercial for-profit
 plan.
 
 Existing protections have limits. The Affordable Care Act's
@@ -299,7 +298,7 @@ and quality safeguards are essential so prospective payment doesn't
 become one more incentive to withhold care. This is an investment in
 keeping people healthier, and it shouldn't have to promise a quick
 financial return to some individual payer. Risk-adjustment requires
-thoughtful implementation to avoid the current prevelant schemes
+thoughtful implementation to avoid the current prevalent schemes
 to assess patients as having fictitious ailments to increase
 reimbursement. That drains resources from where they're needed as
 well as putting patients at risk by having false diagnoses in

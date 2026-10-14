@@ -1,22 +1,53 @@
 name: Link check
 on:
-  schedule: [{ cron: "17 6 * * 1" }]   # weekly
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "17 6 * * 1"   # weekly: checks external links too
   workflow_dispatch:
-  pull_request:                         # internal-only gate on PRs
+
 jobs:
   links:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-        with: { fetch-depth: 0 }
+        with:
+          fetch-depth: 0
+
       - name: Install Hugo
         run: |
-          curl -fsSL -o h.tgz "https://github.com/gohugoio/hugo/releases/download/v0.162.1/hugo_extended_0.162.1_linux-amd64.tar.gz"
-          tar -xzf h.tgz hugo && sudo mv hugo /usr/local/bin/
-      - run: hugo build -D
-      - uses: actions/cache@v4
-        with: { path: .lycheecache, key: lychee-${{ github.run_id }}, restore-keys: lychee- }
-      - uses: lycheeverse/lychee-action@v2
+          curl -fsSL -o hugo.tar.gz \
+            "https://github.com/gohugoio/hugo/releases/download/v0.162.1/hugo_extended_0.162.1_linux-amd64.tar.gz"
+          mkdir -p "$HOME/bin"
+          tar -xzf hugo.tar.gz -C "$HOME/bin" hugo
+          echo "$HOME/bin" >> "$GITHUB_PATH"
+
+      # The site deploys under /tsak/. Build exactly what gets deployed (no
+      # drafts) into a tsak/ directory so root-relative links such as
+      # /tsak/articles/... resolve against --root-dir, and --remap makes the
+      # absolute self-links (canonical, og:image, RSS) check against this build
+      # instead of the live site, which doesn't have new pages yet.
+      - name: Build the site
+        run: hugo build --destination _site/tsak
+
+      - name: Restore lychee cache
+        uses: actions/cache@v4
         with:
-          args: --config lychee.toml ${{ github.event_name == 'pull_request' && '--offline' || '' }} public/
-          fail: ${{ github.event_name == 'pull_request' }}
+          path: .lycheecache
+          key: lychee-${{ github.run_id }}
+          restore-keys: lychee-
+
+      # Pushes and PRs check internal links only (fast, deterministic).
+      # The weekly/manual run also checks external links.
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --config lychee.toml
+            --root-dir ${{ github.workspace }}/_site
+            --remap 'https://holmgrown.com/tsak/ file://${{ github.workspace }}/_site/tsak/'
+            --no-progress
+            ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && ' ' || '--offline' }}
+            _site/tsak
+          fail: true

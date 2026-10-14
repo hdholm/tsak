@@ -1,7 +1,6 @@
 +++
 date = '2026-10-10T08:15:55-04:00'
 title = 'Congressional Analysis'
-draft = true
 [build]
   list = 'never'
 +++

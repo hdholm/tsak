@@ -19,8 +19,8 @@ There are primarily three categories of things here:
 - thoughts on public policy that are often less full solutions than improvements
   on the current state of affairs, and
 - random stuff that is usually culture or entertainment
-You may not agree with things written here. If you believe you have a
-improvement either substantive or gramatic that I've written about here feel
+You may not agree with things written here. If you believe you have an
+improvement either substantive or grammatical that I've written about here feel
 free to suggest the improvement as described below. I may not agree with
 you---and you are free to publish your own words on your own site. You shouldn't
 expect that all suggested updates will result in a change here. If you suggest
@@ -32,7 +32,7 @@ to be suboptimal.  So don't depend on something staying here forever.
 ## Policy Article Notes
 
 Often improvements for public policy ills are blocked by entities that find the
-existing disfunctional systems benefit them at the expense of the broader
+existing dysfunctional systems benefit them at the expense of the broader
 society. Consequently, often what is most needed is not naming the
 solution, but the political will to implement it.  I hope to some tiny extent
 articles here can increase the political pressure for positive change. If you

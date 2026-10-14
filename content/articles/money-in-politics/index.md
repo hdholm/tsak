@@ -40,7 +40,7 @@ it. A rule that restricts a corporation today can be turned on a
 union, a neighborhood group, or a dissident publisher tomorrow. But we
 need to remind ourselves over and over, as our political system has
 not, that corporations are ***not*** people. People have rights
-endowed by their creator. They have thougts and feelings and
+endowed by their creator. They have thoughts and feelings and
 desires. Corporations do not, and we far too often confuse the two.
 
 But campaigns also need money to compete, and the people who can
@@ -183,7 +183,7 @@ because one person can't do everything alone. A reform that bans
 organized speech would damage democracy. So would one that exempts
 every incorporated entity without asking how its election spending is
 financed. But again, people matter. Organizations should be a
-reflection of their people and a handful of powerful donars should not
+reflection of their people and a handful of powerful donors should not
 be able to hide behind an "organization" that is nothing more that a
 name.
 
@@ -233,7 +233,7 @@ We should pursue a parallel package:
   sources, with protection where disclosure creates a substantiated risk.
   This should trace to individual citizens and once again only people,
   not corporations or unions, make decisions and should have free
-  speach rights.
+  speech rights.
 - Real enforcement of coordination and source restrictions.
 - Voluntary public financing built around broad participation, small
   contributions, or voter-directed vouchers.

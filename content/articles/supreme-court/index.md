@@ -149,8 +149,8 @@ reelection. A long, nonrenewable term protects a justice from
 immediate political pressure and still gives predictable
 turnover. Eighteen years spans several administrations and
 congressional majorities. Making it nonrenewable removes any
-temptation to please whoever could grant another term. An eighteen
-year is a significant part of a career for most people, and should be
+temptation to please whoever could grant another term. An eighteen-year
+term is a significant part of a career for most people, and should be
 long enough to spend in one job.
 
 The Brennan Center's eighteen-year proposal and the term-limit bills
@@ -202,9 +202,9 @@ politics. We should also bar renewal or extension of the active term,
 and avoid post-Court arrangements that let a justice's next employer
 create conflicts in the final years. With a functional retirement
 system that I believe already exists, even significant restrictions on
-post-term empolyment should not be constraining after an 18 year
+post-term employment should not be constraining after an 18-year
 term. A judicial appointment should carry a lifetime benefit, it
-need not be a path to exteme wealth.
+need not be a path to extreme wealth.
 
 ### Make the difficult details explicit
 
@@ -235,7 +235,7 @@ enforceable decision process while keeping a real Senate role. Silence
 shouldn't be a permanent veto, and confirmation shouldn't be automatic
 because a calendar ran out. The fallback has to be designed, not left
 to partisan improvisation. This can likely be legislatively adopted
-early with an intent for constitutional ammendment to prevent
+early with an intent for constitutional amendment to prevent
 politically motivated changes to the process.
 
 ### Use a route that can withstand challenge

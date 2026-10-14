@@ -1,6 +1,5 @@
 +++
 date = '2026-10-11T20:59:14-04:00'
-draft = true
 title = 'Economic Policy'
 description = 'Competition, public guardrails, and the limits of an economy organized around extraction'
 categories = ['public-policy']
@@ -17,7 +16,7 @@ The "greed is good" version of capitalism turns morality on its head.
 It says extracting more value for an owner is sufficient justification
 for a business decision, even when the costs land on workers,
 customers, communities, or the environment. Greed is instead a deadly
-sin, but you needn't dealve into judeo christian ethics to discover
+sin, but you needn't delve into Judeo-Christian ethics to discover
 how harmful it is.  Competition drives people to do better for
 themselves and for society, but unregulated capitalism actually
 distorts competition and rewards
@@ -31,7 +30,7 @@ shouldn't be an excuse for exploiting their lack of alternatives.
 And let's be honest with our terms.  A competitive, capitalist economy
 strongly regulated is not socialism and it's not communism.  Protecting the
 vulnerable and restricting people's basest behaviors does not change the
-basic enonomic system.
+basic economic system.
 
 ## Where We Started
 
@@ -146,7 +145,7 @@ media. Repairable equipment, transferable records, transparent
 contracts, and the ability to use another supplier all strengthen a
 customer's real options. Email interoperability allows people to leave
 Gmail when the service gets worse. The fact they are now limiting
-interoperability with other domain providers is arguabily just
+interoperability with other domain providers is arguably just
 rent-seeking behavior.
 
 ### Economic power can buy protection for economic power
@@ -206,12 +205,12 @@ a market can organize one part of a service doesn't settle how to
 finance the whole public obligation. Similarly, utility competition
 among providers in the gas and electric industries along with
 regulated monopolies for distribution can be beneficial. Having
-multiple ducplicative, expensive distribution networks provides little
+multiple duplicative, expensive distribution networks provides little
 benefit to anyone, but increases costs. Careful thought to
 first-principles is required though. For example a government enforced
 monopoly for "cable" providers for a geographic area can prevent
 expensive duplication, but if the monopolist is not required to
-provide access to that infrastucture to other providers the monopolist
+provide access to that infrastructure to other providers the monopolist
 will almost certainly extract fees much higher than they would if
 competition was enforced.
 
@@ -316,7 +315,7 @@ whether that behavior deserves society's protection.
 
 Lastly, let us not confuse economic well-being with well-being in
 general.  Money can measurable improve one's life.  But there is
-abundant evience that it does not produce happiness or a long, healthy
+abundant evidence that it does not produce happiness or a long, healthy
 life by itself.  Moreover, a society with deep economic inequality
 suffers even more in terms of real health and happiness. We **must**
 begin to focus more on the real people within our political systems.
