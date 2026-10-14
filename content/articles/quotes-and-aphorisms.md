@@ -23,6 +23,8 @@ somewhere convenient. You can read along. Where I could, I have noted a source.
   credited to George Bernard Shaw, but I have not found a solid source. Shaw's
   [Wikiquote page](https://en.wikiquote.org/wiki/George_Bernard_Shaw) tracks
   attribution questions.)*
+- Great Britain and the United States are two nations devided by a common
+  language.
 
 ## Notable Personalities
 
