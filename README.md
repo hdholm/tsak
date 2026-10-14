@@ -15,7 +15,7 @@ Use lowercase tags, and keep categories to a few broad buckets.
 
 ## Link checking
 
-[![Check Links](https://github.com/hdholm/tsak/actions/workflows/links.yml/badge.svg)](https://github.com/hdholm/tsak/actions/workflows/links.yml)
+[![Check Links](https://github.com/hdholm/tsak/actions/workflows/linkcheck.yml/badge.svg)](https://github.com/hdholm/tsak/actions/workflows/linkcheck.yml)
 
 The site deploys under `/tsak/`, so build into a `tsak/` directory and point
 [lychee](https://lychee.cli.rs/) at the parent as its root:
