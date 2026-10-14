@@ -4,9 +4,6 @@ title = 'Representation'
 description = 'Potential improvements to US representative democracy'
 categories = ['public-policy']
 tags = ['constitution','voting','politics']
-layout = "single"
-[build]                                                                         
-  list = 'always'
 +++
 
 The United States political system gives the people already in office
