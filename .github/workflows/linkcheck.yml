@@ -1,0 +1,22 @@
+name: Link check
+on:
+  schedule: [{ cron: "17 6 * * 1" }]   # weekly
+  workflow_dispatch:
+  pull_request:                         # internal-only gate on PRs
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with: { fetch-depth: 0 }
+      - name: Install Hugo
+        run: |
+          curl -fsSL -o h.tgz "https://github.com/gohugoio/hugo/releases/download/v0.162.1/hugo_extended_0.162.1_linux-amd64.tar.gz"
+          tar -xzf h.tgz hugo && sudo mv hugo /usr/local/bin/
+      - run: hugo build -D
+      - uses: actions/cache@v4
+        with: { path: .lycheecache, key: lychee-${{ github.run_id }}, restore-keys: lychee- }
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          args: --config lychee.toml ${{ github.event_name == 'pull_request' && '--offline' || '' }} public/
+          fail: ${{ github.event_name == 'pull_request' }}

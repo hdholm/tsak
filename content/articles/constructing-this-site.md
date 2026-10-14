@@ -70,6 +70,7 @@ GitHub.
 
 ## References
 
+- [This site's source on GitHub](https://github.com/hdholm/tsak/)
 - [David Straub: My new website setup](https://davidstraub.de/posts/my-new-website-setup/)
 - [Greg Vedders: Rebuilding without a Hugo theme](https://gregvedders.com/posts/rebuilding-gregvedders-com-without-a-hugo-theme/)
 - [Hugo documentation](https://gohugo.io/documentation/)

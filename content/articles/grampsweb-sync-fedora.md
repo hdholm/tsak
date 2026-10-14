@@ -3,7 +3,7 @@ date = '2026-09-06T01:20:21-04:00'
 title = 'Using Gramps Web Sync on Fedora'
 description = 'Making Gramps Web Sync store its password in the GNOME keyring on Fedora by configuring Python keyring.'
 categories = ['tech']
-tags = ['genealogy', 'gramps', 'gramps-web', 'software', 'fedora']
+tags = ['genealogy','gramps','gramps-web','software','fedora','web']
 +++
 When using [Gramps Web Sync](https://www.grampsweb.org/administration/sync/) on
 Fedora's GNOME desktop to keep [Gramps](https://gramps-project.org/blog/) and a

@@ -2,3 +2,12 @@
 /public/
 /resources/
 .hugo_build.lock
+
+# Editor backup and swap files
+*~
+\#*\#
+.\#*
+*.swp
+*.swo
+.*.swp
+.*.swo

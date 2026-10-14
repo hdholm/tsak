@@ -63,3 +63,6 @@ toLower = true
   [[related.indices]]
   name = 'date'
   weight = 10
+
+[markup.goldmark.parser.attribute]
+  block = true

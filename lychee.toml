@@ -1,0 +1,17 @@
+cache = true
+max_cache_age = "7d"
+max_concurrency = 8
+max_retries = 2
+timeout = 30
+user_agent = "Mozilla/5.0 (X11; Linux x86_64) Firefox/130.0"
+# Sites that answer bots with 403/429 but work fine for people
+accept = ["200..=299", "403", "429"]
+exclude = [
+  '^https://(www\.)?(facebook|linkedin)\.com/(sharer|sharing)',  # share-intent links
+  '^https://bsky\.app/intent',
+  '^https://infosec\.exchange/share',
+  '^https://(www\.)?linkedin\.com/in/',      # login walls
+  '^https://(www\.)?facebook\.com/howard',
+]
+exclude_path = ["/pagefind"]
+include_fragments = "none"   # also verifies #footnote and heading anchors

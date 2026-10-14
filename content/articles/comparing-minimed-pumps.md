@@ -2,12 +2,12 @@
 date = '2026-09-10T23:32:15-04:00'
 title = 'Comparing MiniMed Pumps'
 description = 'Pros and cons of moving from a MiniMed 780G to a MiniMed Flex insulin pump.'
-categories = ['healthcare']
-tags = ['diabetes', 'medical-devices']
+categories = ['tech']
+tags = ['diabetes', 'medical-devices','healthcare']
 +++
 I have used MiniMed insulin pumps for many years. I recently upgraded from a
-[MiniMed 780G](https://discourse.gohugo.io/t/enablegitinfo-docuMiniMed%20780Gmentation-and-behavior/6131/12)
- to a [MiniMed Flex](https://www.minimed.com/en-us/products/minimed-780g-insulin-pump-system).
+[MiniMed 780G](https://www.minimed.com/en-us/products/minimed-780g-insulin-pump-system)
+ to a [MiniMed Flex](https://www.minimed.com/en-us/products/minimed-flex-system).
 Overall the Flex is an improvement, but there are some things I wish were
 different.
 
