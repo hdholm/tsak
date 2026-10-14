@@ -3,7 +3,7 @@ max_cache_age = "7d"
 max_concurrency = 8
 max_retries = 2
 timeout = 30
-user_agent = "Mozilla/5.0 (X11; Linux x86_64) Firefox/130.0"
+user_agent = "Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0"
 # Sites that answer bots with 403/429 but work fine for people
 accept = ["200..=299", "403", "429"]
 exclude = [
@@ -13,5 +13,16 @@ exclude = [
   '^https://infosec\.exchange/share',
   '^https://(www\.)?linkedin\.com/in/',      # login walls
   '^https://(www\.)?facebook\.com/howard',
+  # These work in a browser but lychee can't get through. Seen 2026-10-14:
+  #  - ftc.gov: 403 to curl, 404 to curl or lychee with a browser User-Agent
+  #    (bot filtering; only a real browser passes)
+  #  - reuters.com: 401 (bot wall)
+  #  - nyccfb.info: TCP reset on lychee's TLS handshake while every curl variant
+  #    gets 200, so it is the TLS/HTTP client, not headers or the User-Agent;
+  #    lychee has no setting to change that
+  # Re-check by hand occasionally; drop an entry if lychee can reach it later.
+  '^https://www\.ftc\.gov/',
+  '^https://www\.reuters\.com/',
+  '^https://www\.nyccfb\.info/',
 ]
 include_fragments = "anchor-only"
