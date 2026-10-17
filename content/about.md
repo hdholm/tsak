@@ -48,6 +48,6 @@ or have improvements to offer, you can submit issues or pull requests
 there. More details are in
 [this article]({{< relref "articles/constructing-this-site.md" >}})
 
-Credit to my friend Bob and his AI wizardry for the first version of the
-graphic used here and throughout the site which has only changed slightly from
-his original.
+Credit to my friend [Bob](https://bobcronin.com/) and his AI wizardry for the
+first version of the graphic used here and throughout the site which has only
+changed slightly from his original.
