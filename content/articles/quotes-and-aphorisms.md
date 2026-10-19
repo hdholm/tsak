@@ -57,6 +57,58 @@ somewhere convenient. You can read along. Where I could, I have noted a source.
   (1913)](https://kwize.com/quote/3485)
 - "Occasionally he stumbled over the truth, but hastily picked himself up and
   hurried on as if nothing had happened."---[Winston Churchill](https://quoteinvestigator.com/2012/05/26/stumble-over-truth/)
+- “If you board the wrong train, it is no use running along the corridor in
+  the other direction.”---Dietrich Bonhoeffer
+- “In a word, live together in the forgiveness of your sins, for
+  without it no human fellowship, least of all a marriage, can
+  survive. Don’t insist on your rights, don’t blame each other, don’t
+  judge or condemn each other, don’t find fault with each other, but
+  accept each other as you are, and forgive each other every day from
+  the bottom of your hearts…”---Dietrich Bonhoeffer, [Letters and
+  Papers from Prison](https://www.goodreads.com/work/quotes/1153999)
+- “Stupidity is a more dangerous enemy of the good than malice. One may
+  protest against evil; it can be exposed and, if need be, prevented by
+  use of force. Evil always carries within itself the germ of its own
+  subversion in that it leaves behind in human beings at least a sense
+  of unease. Against stupidity we are defenseless. Neither protests nor
+  the use of force accomplish anything here; reasons fall on deaf ears;
+  facts that contradict one’s prejudgment simply need not be believed –
+  in such moments the stupid person even becomes critical – and when
+  facts are irrefutable they are just pushed aside as inconsequential,
+  as incidental. In all this the stupid person, in contrast to the
+  malicious one, is utterly self satisfied and, being easily irritated,
+  becomes dangerous by going on the attack. For that reason, greater
+  caution is called for when dealing with a stupid person than with a
+  malicious one. Never again will we try to persuade the stupid person
+  with reasons, for it is senseless and dangerous.”  ― Dietrich
+  Bonhoeffer, [Letters and Papers from
+  Prison](https://www.goodreads.com/work/quotes/1153999)
+- “We have been silent witnesses of evil deeds; we have been drenched
+  by many storms; we have learnt the arts of equivocation and
+  pretence; experience has made us suspicious of others and kept us
+  from being truthful and open; intolerable conflicts have worn us
+  down and even made us cynical. Are we still of any use? What we
+  shall need is not geniuses, or cynics, or misanthropes, or clever
+  tacticians, but plain, honest, and straightforward men. Will our
+  inward power of resistance be strong enough, and our honesty with
+  ourselves remorseless enough, for us to find our way back to
+  simplicity and straightforwardness?”---Dietrich Bonhoeffer, [Letters
+  and Papers from
+  Prison](https://www.goodreads.com/work/quotes/1153999)
+- “Silence in the face of evil is itself evil: God will not hold us guiltless.\
+  Not to speak is to speak.\
+  Not to act is to act.”---Dietrich Bonhoeffer
+- “Judging others makes us blind, whereas love is illuminating. By
+  judging others we blind ourselves to our own evil and to the grace
+  which others are just as entitled to as we are.”---Dietrich
+  Bonhoeffer, [The Cost of Discipleship](https://www.goodreads.com/work/quotes/2723088-nachfolge)  
+- "Cheap grace is the preaching of forgiveness without requiring
+  repentance, baptism without church discipline, Communion without
+  confession, absolution without personal confession. Cheap grace is
+  grace without discipleship, grace without the cross, grace without
+  Jesus Christ, living and incarnate."---Dietrich Bonhoeffer,[The Cost
+  of
+  Discipleship](https://www.goodreads.com/quotes/423945-cheap-grace-means-grace-sold-on-the-market-like-cheapjacks)
 
 ## Literature and Television
 
