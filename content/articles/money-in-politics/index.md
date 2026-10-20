@@ -3,7 +3,9 @@ date = '2026-10-11T20:59:14-04:00'
 title = 'Money in Politics'
 description = 'Reversing Citizens United while protecting political speech and widening participation'
 categories = ['public-policy']
-tags = ['politics','constitution','campaign-finance']
+tags = ['politics','constitution','campaign-finance','democracy']
+series_order = 2
+lastreviewed = 2026-10-14
 +++
 
 Every citizen has one vote. We do not have the same ability to put an
@@ -79,11 +81,7 @@ individuals; those protections already existed.
 candidate contributions face source restrictions and limits;
 independent expenditure groups can receive unlimited lawful-source
 contributions, provided spending is not
-coordinated.](campaign-finance-routes.svg)
-
-*Simplified federal framework. Super PAC fundraising and corporate
-independent spending reflect related but distinct legal developments;
-other source prohibitions and reporting rules still apply.*
+coordinated.](campaign-finance-routes.svg "Simplified federal framework. Super PAC fundraising and corporate independent spending reflect related but distinct legal developments; other source prohibitions and reporting rules still apply.")
 
 The Court's central premise was that independent expenditures don't
 create enough corruption, or appearance of corruption, to justify the
@@ -164,12 +162,7 @@ participation rather than just cap spending.
 
 ![Illustration of an eight-to-one small-donor match: a qualifying $25
 contribution receives $200 in public matching funds, making $225
-available to the participating campaign.](small-donor-match.svg)
-
-*Arithmetic illustration using NYC's matching rate. Actual
-eligibility, qualification requirements, matchable amounts, and
-payment caps apply. It is not an unconditional payment for every
-donation.*
+available to the participating campaign.](small-donor-match.svg "Arithmetic illustration using NYC's matching rate. Actual eligibility, qualification requirements, matchable amounts, and payment caps apply. It is not an unconditional payment for every donation.")
 
 A candidate who can fund a competitive campaign with many modest
 contributions has a real alternative to courting a few wealthy

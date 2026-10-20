@@ -1,0 +1,20 @@
+{{- /* Older/Newer by date, or Previous/Next in the series for articles with series_order. */ -}}
+{{- $prev := .PrevInSection -}}
+{{- $next := .NextInSection -}}
+{{- $prevLabel := "Older" -}}
+{{- $nextLabel := "Newer" -}}
+{{- with .Params.series_order -}}
+  {{- $order := . -}}
+  {{- $prev = false -}}
+  {{- $next = false -}}
+  {{- $prevLabel = "Previous in series" -}}
+  {{- $nextLabel = "Next in series" -}}
+  {{- range where (where site.RegularPages "Section" "articles") "Params.series_order" "gt" 0 -}}
+    {{- if eq .Params.series_order (sub $order 1) }}{{ $prev = . }}{{ end -}}
+    {{- if eq .Params.series_order (add $order 1) }}{{ $next = . }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+<nav class="post-nav" aria-label="Article navigation">
+  <div>{{ with $prev }}<span>{{ $prevLabel }}</span><a href="{{ .RelPermalink }}">← {{ .LinkTitle }}</a>{{ end }}</div>
+  <div>{{ with $next }}<span>{{ $nextLabel }}</span><a href="{{ .RelPermalink }}">{{ .LinkTitle }} →</a>{{ end }}</div>
+</nav>

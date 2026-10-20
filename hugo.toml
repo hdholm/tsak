@@ -64,5 +64,13 @@ toLower = true
   name = 'date'
   weight = 10
 
+[markup.goldmark.parser]
+  # lets the image render hook see standalone images as blocks (figure/figcaption)
+  wrapStandAloneImageWithinParagraph = false
+
 [markup.goldmark.parser.attribute]
   block = true
+
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel = 3

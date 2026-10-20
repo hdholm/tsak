@@ -4,6 +4,8 @@ title = 'Economic Policy'
 description = 'Competition, public guardrails, and the limits of an economy organized around extraction'
 categories = ['public-policy']
 tags = ['economics','capitalism','antitrust','inequality']
+series_order = 4
+lastreviewed = 2026-10-14
 +++
 
 Markets do useful things. They let people try ideas, discover demand, build
@@ -90,11 +92,7 @@ entity by harming others rather than making a fair trade with others.
 ![A conceptual comparison: value creation improves products, quality,
  and productivity; extraction relies on lock-in, weakened
  alternatives, and shifting costs onto
- others.](value-and-extraction.svg)
-
-*An analytical distinction, not a classification of every profitable
-business. Real firms can combine productive activity with harmful
-practices.*
+ others.](value-and-extraction.svg "An analytical distinction, not a classification of every profitable business. Real firms can combine productive activity with harmful practices.")
 
 Economists call returns sustained by a protected advantage, rather than an
 open contest, rents. Some temporary advantages, such as carefully designed
@@ -159,10 +157,7 @@ favorable rules. The rules then sustain the position.
 ![A conceptual feedback loop: market power creates resources;
 resources support political influence; influence can shape favorable
 rules; favorable rules can reinforce market power. Guardrails target
-each link.](economic-power-loop.svg)
-
-*A mechanism to examine, not evidence that every company follows it or
-that any particular contribution caused a policy decision.*
+each link.](economic-power-loop.svg "A mechanism to examine, not evidence that every company follows it or that any particular contribution caused a policy decision.")
 
 Elizabeth Warren's speeches on corporate monopolies tie competition
 directly to democratic power: concentrated businesses can dominate

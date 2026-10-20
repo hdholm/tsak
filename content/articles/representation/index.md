@@ -3,7 +3,9 @@ date = '2026-10-10T08:15:55-04:00'
 title = 'Representation'
 description = 'Potential improvements to US representative democracy'
 categories = ['public-policy']
-tags = ['constitution','voting','politics']
+tags = ['constitution','voting','politics','democracy']
+series_order = 1
+lastreviewed = 2026-10-14
 +++
 
 The United States political system gives the people already in office
@@ -94,10 +96,7 @@ what Americans want.
 
 ![Hypothetical regions: one has 80 percent of the land but 20 percent
  of the voters; the other has 20 percent of the land and 80 percent of
- the voters.](land-and-voters.svg)
-
-*An illustration of the difference between land area and voters, using
-hypothetical numbers.*
+ the voters.](land-and-voters.svg "An illustration of the difference between land area and voters, using hypothetical numbers.")
 
 ### A fair-looking map can still produce a poor result
 
@@ -118,10 +117,7 @@ win. Equal population does not prevent either technique.
 
 ![The same 60 A voters and 40 B voters in five equal districts can
  produce three A and two B seats, or four A and one B seats, depending
- on the grouping.](packing-and-cracking.svg)
-
-*The arithmetic of packing and cracking. These groups are a schematic,
- not a proposed geographic map.*
+ on the grouping.](packing-and-cracking.svg "The arithmetic of packing and cracking. These groups are a schematic, not a proposed geographic map.")
 
 An independent commission can remove the most direct conflict of
 interest. It cannot give a single district more than one winner. I
@@ -257,11 +253,7 @@ representation and gerrymandering.
 ![A 60–40 electorate produces five A representatives in five identical
  single-member districts, compared with three A and two B
  representatives in a five-seat proportional district under the stated
- assumptions.](votes-and-seats.svg)
-
-*Illustration assumes enough candidates and voters ranking their
- party's candidates first. Actual results depend on rankings and
- transfers.*
+ assumptions.](votes-and-seats.svg "Illustration assumes enough candidates and voters ranking their party's candidates first. Actual results depend on rankings and transfers.")
 
 Simply creating five seats and letting everyone vote for five
 candidates would not accomplish this. An organized majority could

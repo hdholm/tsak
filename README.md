@@ -13,6 +13,17 @@ npx -y pagefind@1.5.2 --site public   # search index; the deploy workflow does t
 New article: `hugo new content articles/my-title.md`, then fill in `description`.
 Use lowercase tags, and keep categories to a few broad buckets.
 
+Optional front matter for policy articles:
+
+- `series_order = N` puts the article in the Public Policy series (shown on
+  `/categories/public-policy/`, with Previous/Next links in that order).
+- `lastreviewed = 2026-10-14` shows a "Last reviewed" date; update it when the
+  article is reviewed for current information.
+- `toc = false` hides the table of contents that long articles (over 1,500
+  words) get automatically.
+- Figures: `![alt text](image.svg "Caption")` renders as `<figure>` with the
+  title as its `<figcaption>`.
+
 ## Link checking
 
 [![Check Links](https://github.com/hdholm/tsak/actions/workflows/linkcheck.yml/badge.svg)](https://github.com/hdholm/tsak/actions/workflows/linkcheck.yml)

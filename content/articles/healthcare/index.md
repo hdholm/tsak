@@ -3,7 +3,9 @@ date = '2026-10-11T20:59:14-04:00'
 title = 'Healthcare'
 description = 'Moving from sick care to healthcare through universal coverage and properly funded primary care'
 categories = ['public-policy']
-tags = ['healthcare','medicare']
+tags = ['healthcare','medicare','economics']
+series_order = 5
+lastreviewed = 2026-10-14
 +++
 
 A healthcare system should help people stay well, catch problems early, and
@@ -94,11 +96,7 @@ spending.[^spending]
 
 ![Three measures of U.S. national health expenditure in 2024: $5.3
 trillion total, $15,474 per person, and 18.0 percent of
-GDP.](healthcare-spending.svg)
-
-*Source: CMS National Health Expenditure Accounts, calendar year
-2024. These are three descriptions of the same spending, not amounts
-to add together.*
+GDP.](healthcare-spending.svg "Source: CMS National Health Expenditure Accounts, calendar year 2024. These are three descriptions of the same spending, not amounts to add together.")
 
 The Commonwealth Fund's *Mirror, Mirror 2024* ranked the United States
 last overall among ten high-income countries, across access, care
@@ -146,11 +144,7 @@ supporting it consistently, not pretending the condition is gone.
 can contribute to delayed management and avoidable crises; universal
 affordable coverage with funded primary care supports earlier
 assessment and continuing management, with the aim of reducing
-avoidable deterioration.](healthcare-before-crisis.svg)
-
-*A proposed shift in the timing of care, not a forecast of how much
-hospital use would fall. Prevention and continuing care cannot
-eliminate every illness, emergency, or need for intensive treatment.*
+avoidable deterioration.](healthcare-before-crisis.svg "A proposed shift in the timing of care, not a forecast of how much hospital use would fall. Prevention and continuing care cannot eliminate every illness, emergency, or need for intensive treatment.")
 
 ### Care can disappear while coverage remains
 
@@ -325,11 +319,7 @@ potentially preventable emergency visits and admissions.
 
 ![Four responsibilities for a better healthcare system: universal
 coverage, affordable care, available clinicians and facilities, and
-accountable administration.](coverage-and-care.svg)
-
-*Proposed design priorities. Coverage is necessary, but a benefit
-cannot deliver care without clinicians, facilities, and workable
-administration.*
+accountable administration.](coverage-and-care.svg "Proposed design priorities. Coverage is necessary, but a benefit cannot deliver care without clinicians, facilities, and workable administration.")
 
 Changing the payer while leaving delivery underfunded would repeat an old
 mistake. I would pair universal coverage with:

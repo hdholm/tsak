@@ -5,13 +5,23 @@
   <article class="article-content"{{ if eq .Section "articles" }} data-pagefind-body{{ end }}>
     {{ partial "social-share.html" . }}
     {{ partial "article-meta.html" . }}
+    {{ with .Params.series_order }}
+    {{ $count := len (where (where site.RegularPages "Section" "articles") "Params.series_order" "gt" 0) }}
+    <p class="series-note">Part {{ . }} of {{ $count }} in the <a href="{{ (site.GetPage "/categories/public-policy").RelPermalink }}">Public Policy series</a></p>
+    {{ end }}
+    {{ if and (eq .Section "articles") (gt .WordCount 1500) (ne .Params.toc false) }}
+    {{ $toc := .TableOfContents }}
+    {{ if strings.Contains $toc "<li>" }}
+    <details class="toc" open>
+      <summary>Contents</summary>
+      {{ $toc | safeHTML }}
+    </details>
+    {{ end }}
+    {{ end }}
     <div class="prose">{{ .Content }}</div>
     {{ partial "tags.html" . }}
     {{ partial "categories.html" . }}
-    <nav class="post-nav" aria-label="Article navigation">
-      <div>{{ with .PrevInSection }}<span>Older</span><a href="{{ .RelPermalink }}">← {{ .LinkTitle }}</a>{{ end }}</div>
-      <div>{{ with .NextInSection }}<span>Newer</span><a href="{{ .RelPermalink }}">{{ .LinkTitle }} →</a>{{ end }}</div>
-    </nav>
+    {{ partial "post-nav.html" . }}
   </article>
   {{ partial "sidebar.html" . }}
 </div>

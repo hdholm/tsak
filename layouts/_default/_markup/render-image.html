@@ -1,0 +1,12 @@
+{{- /* Block images (alone in a paragraph) become <figure>; the markdown title is the caption.
+       Usage: ![alt text](image.svg "Caption, which may contain *markdown*.") */ -}}
+{{- $src := .Destination -}}
+{{- with .PageInner.Resources.Get .Destination }}{{ $src = .RelPermalink }}{{ end -}}
+{{- if .IsBlock -}}
+<figure>
+  <img src="{{ $src | safeURL }}" alt="{{ .PlainText }}" loading="lazy">
+  {{ with .Title }}<figcaption>{{ . | $.PageInner.RenderString }}</figcaption>{{ end }}
+</figure>
+{{- else -}}
+<img src="{{ $src | safeURL }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy">
+{{- end -}}

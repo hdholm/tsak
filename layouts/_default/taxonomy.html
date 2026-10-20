@@ -1,6 +1,7 @@
 {{ define "main" }}
 <div class="content-grid wrap">
   <section class="article-list">
+    {{ with .Content }}<div class="prose intro">{{ . }}</div>{{ end }}
     {{ range .Paginator.Pages }}
       <article class="post-card">
         <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>

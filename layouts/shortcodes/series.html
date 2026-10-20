@@ -1,0 +1,7 @@
+{{- /* Ordered list of articles that set series_order in front matter, with their descriptions. */ -}}
+{{- $series := sort (where (where site.RegularPages "Section" "articles") "Params.series_order" "gt" 0) "Params.series_order" -}}
+<ol class="series-list">
+{{- range $series }}
+  <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ with .Description }}: {{ . }}.{{ end }}</li>
+{{- end }}
+</ol>

@@ -3,7 +3,9 @@ date = '2026-10-11T20:59:14-04:00'
 title = 'The Supreme Court'
 description = 'Nine justices, staggered eighteen-year terms, and enforceable ethical standards'
 categories = ['public-policy']
-tags = ['constitution','supreme-court','ethics']
+tags = ['constitution','supreme-court','ethics','democracy']
+series_order = 3
+lastreviewed = 2026-10-14
 +++
 
 The Supreme Court needs independence. A justice has to be able to tell a
@@ -189,11 +191,7 @@ subject to confirmation.[^terms]
 
 ![Proposed appointment schedule: nine fixed slots come due at years 2,
 4, 6, 8, 10, 12, 14, 16, and 18; each succeeding full term lasts
-eighteen years.](court-terms.svg)
-
-*Proposed steady-state schedule, not a transition calendar for the
-current justices. Vacancies and delayed confirmations need separate
-rules.*
+eighteen years.](court-terms.svg "Proposed steady-state schedule, not a transition calendar for the current justices. Vacancies and delayed confirmations need separate rules.")
 
 That spreads appointment opportunities more evenly. It would not turn
 the Court into a mirror of the latest election, and it shouldn't;
@@ -259,11 +257,7 @@ put off ethics work and pure legislative implementation in the meantime.
 ![Proposed ethics process: a complaint or conflict flag receives
 independent screening, an investigation with a right to respond where
 warranted, and a reasoned decision with review. Decisions concern
-conduct rather than the merits of rulings.](court-ethics.svg)
-
-*Proposed oversight structure. Its legal authority and remedies would
-need to be defined consistently with judicial independence and
-constitutional removal provisions.*
+conduct rather than the merits of rulings.](court-ethics.svg "Proposed oversight structure. Its legal authority and remedies would need to be defined consistently with judicial independence and constitutional removal provisions.")
 
 I would require timely, searchable disclosures; strict limits on gifts and
 privately financed travel; clear rules on investments and outside income;
