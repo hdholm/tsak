@@ -1,7 +1,7 @@
 ---
 title: "Public Policy"
 description: "Articles on representation, money in politics, the Supreme Court, economic policy, and healthcare."
---
+---
 These articles are part of a continuing series that looks at how
 American government and the economy are organized, and at changes that
 would make them work better for the people they are supposed to
