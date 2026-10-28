@@ -2,7 +2,8 @@
 <div class="content-grid wrap">
   <section class="article-list">
     {{ with .Content }}<div class="prose intro">{{ . }}</div>{{ end }}
-    {{ range .Paginator.Pages }}
+    {{ $pages := .Pages.ByLastmod.Reverse }}
+    {{ range (.Paginate $pages).Pages }}
       <article class="post-card">
         <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
         {{ partial "article-meta.html" . }}

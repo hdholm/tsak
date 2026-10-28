@@ -8,7 +8,8 @@
   <section class="sidebar-block">
     <h2>Recent Posts</h2>
     <ul class="sidebar-list">
-      {{ range first (site.Params.recent_posts_number | default 4) (where site.RegularPages "Section" "articles") }}
+      {{ $articles := (where site.RegularPages "Section" "articles").ByLastmod.Reverse }}
+      {{ range first (site.Params.recent_posts_number | default 4) $articles }}
         <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a><small>{{ .Date.Format "Jan 2, 2006" }}</small></li>
       {{ end }}
     </ul>

@@ -13,6 +13,12 @@ npx -y pagefind@1.5.2 --site public   # search index; the deploy workflow does t
 New article: `hugo new content articles/my-title.md`, then fill in `description`.
 Use lowercase tags, and keep categories to a few broad buckets.
 
+Article listings on the homepage, article collection, category/tag collections, and
+Recent Posts sidebar are ordered by last-modified date (newest first). Hugo uses
+an explicit `lastmod` value when present, otherwise the Git file modification time,
+then the article's publication date. Publication dates shown in article metadata
+remain unchanged.
+
 Optional front matter for policy articles:
 
 - `series_order = N` puts the article in the Public Policy series (shown on

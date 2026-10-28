@@ -3,7 +3,8 @@
   <section class="article-list">
     {{ with .Content }}<div class="prose intro home-intro">{{ . }}</div>{{ end }}
     <h2 class="section-title">Latest Articles</h2>
-    {{ range first 6 (where site.RegularPages "Section" "articles") }}
+    {{ $articles := (where site.RegularPages "Section" "articles").ByLastmod.Reverse }}
+    {{ range first 6 $articles }}
       <article class="post-card">
         <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
         {{ partial "article-meta.html" . }}

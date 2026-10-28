@@ -6,6 +6,10 @@ defaultContentLanguage = 'en'
 enableRobotsTXT = true
 enableGitInfo = true
 
+# Prefer explicit lastmod, then Git's file modification time, then publication date.
+[frontmatter]
+lastmod = ['lastmod', ':git', 'date']
+
 [pagination]
 pagerSize = 12
 
