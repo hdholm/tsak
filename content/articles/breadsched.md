@@ -19,10 +19,10 @@ overall current financial picture.
 
 ## BreadSched is Born
 
+{{< staticfig src="images/BreadSched.png" title="BreadSched Logo" width="256px" float="right" >}}
 Now that I no longer have a demanding day job, and AI-assisted coding has
 become good enough to be useful, I am building an application designed for
 my specific desires in a financial applicaiton.  My initial requirements were:
-
 - Written in [Python](https://www.python.org/), the language I am most
   comfortable with.
 - Both a [GTK](https://www.gtk.org/) interface and a web interface, so it works
@@ -35,7 +35,6 @@ my specific desires in a financial applicaiton.  My initial requirements were:
 - Import of a GnuCash data file, since I have a lot of history in that data.
 
 ## Current State
-
 BreadSched is about 77,000 lines of Python, about 5,900 lines of JavaScript,
 and about 50,000 lines of tests (over 2,000 test functions). But it is still
 what I would consider "Alpha" state software and I wouldn't count on
