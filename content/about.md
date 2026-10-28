@@ -19,12 +19,15 @@ There are primarily three categories of things here:
 - thoughts on public policy that are often less full solutions than improvements
   on the current state of affairs, and
 - random stuff that is usually culture or entertainment
+
 You may not agree with things written here. If you believe you have an
 improvement either substantive or grammatical that I've written about here feel
 free to suggest the improvement as described below. I may not agree with
-you---and you are free to publish your own words on your own site. You shouldn't
-expect that all suggested updates will result in a change here. If you suggest
- a change and I agree it is an improvement I will change it.
+you---and you are free to publish your own words on your own site. That means
+you shouldn't expect that all suggested updates will result in a change here.
+If you suggest a change and I agree it is an improvement I will change it. Even
+where you disagree with my position, I encourage you to try and change my mind.
+If you have a well supported argument, I'll consider it.
 
 ***Content will change*** over time as solutions improve, evolve, or are found
 to be suboptimal.  So don't depend on something staying here forever.
