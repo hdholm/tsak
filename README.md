@@ -7,11 +7,15 @@ deployed by `.github/workflows/deploy.yml` on push to `main`.
 ```sh
 hugo server -D            # local preview
 hugo build --minify       # production build into public/ (git-ignored)
-npx -y pagefind@1.5.2 --site public   # search index; the deploy workflow does this
+npx -y pagefind@"$(cat .pagefind-version)" --site public   # search index; the deploy workflow does this
 ```
 
-The Hugo version used by the deploy and link-check workflows is in `.hugo-version`. Change it
-there, and use the same version locally (`hugo version`). Dependabot does not manage it.
+The Hugo version used by the deploy and link-check workflows is in `.hugo-version`, and the
+Pagefind version used by the deploy workflow is in `.pagefind-version`. Dependabot cannot see
+either, so the "Tool versions" workflow (`.github/workflows/tool-versions.yml`) checks weekly for
+newer releases, builds the site with them, and opens a pull request that bumps the file. To check
+by hand without opening anything, run that workflow from the Actions tab with "dry run" ticked.
+Use the same Hugo version locally (`hugo version`).
 
 New article: `hugo new content articles/my-title.md`, then fill in `description`.
 Use lowercase tags, and keep categories to a few broad buckets.

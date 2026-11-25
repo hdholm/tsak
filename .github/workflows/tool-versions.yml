@@ -1,0 +1,37 @@
+name: Tool versions
+
+# Hugo and Pagefind are pinned in .hugo-version and .pagefind-version, which Dependabot
+# cannot see. This opens a pull request when a newer release exists.
+on:
+  schedule:
+    - cron: "23 7 * * 1"   # weekly, Monday
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Report only: do not open pull requests"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write         # push the version-bump branch
+  pull-requests: write    # open the pull request
+  issues: write           # fallback if pull requests cannot be opened
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Check for newer Hugo and Pagefind releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+        run: .github/scripts/check-tool-versions.sh

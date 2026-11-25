@@ -38,7 +38,7 @@ jobs:
           # robots.txt and sitemap.xml are now deployed (see layouts/robots.txt)
 
       - name: Build Pagefind search index
-        run: npx -y pagefind@1.5.2 --site public
+        run: npx -y "pagefind@$(tr -d '[:space:]' < .pagefind-version)" --site public
 
       - name: Check for local-development leftovers
         run: |
