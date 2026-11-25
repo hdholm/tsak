@@ -3,7 +3,7 @@ title: "Enshittification"
 description: "Articles referencing Enshittification."
 ---
 
-The articles below refrernce **Enshittification**, a concept defined by author
+The articles below reference **Enshittification**, a concept defined by author
 Cory Doctorow.
 
 See also:

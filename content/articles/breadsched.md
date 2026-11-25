@@ -19,7 +19,7 @@ overall current financial picture.
 
 ## BreadSched is Born
 
-{{< staticfig src="images/BreadSched.png" title="BreadSched Logo" width="256px" float="right" >}}
+{{< staticfig src="images/BreadSched.webp" title="BreadSched Logo" width="256px" float="right" >}}
 Now that I no longer have a demanding day job, and AI-assisted coding has
 become good enough to be useful, I am building an application designed for
 my specific desires in a financial applicaiton.  My initial requirements were:

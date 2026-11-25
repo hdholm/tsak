@@ -66,7 +66,7 @@ OPNsense that manages the Tang server, exposes some configuration, and
 provides very simple key management. The keys are replicated to
 high-availability peer firewalls, so if your firewalls are redundant,
 your Tang server is automatically redundant too. This is not perhaps
-the "best" way to run mulitple tang servers but it is simple and
+the "best" way to run multiple tang servers but it is simple and
 effective.
 
 Tang can support more elaborate arrangements, such as requiring any
