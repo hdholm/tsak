@@ -10,6 +10,9 @@ hugo build --minify       # production build into public/ (git-ignored)
 npx -y pagefind@1.5.2 --site public   # search index; the deploy workflow does this
 ```
 
+The Hugo version used by the deploy and link-check workflows is in `.hugo-version`. Change it
+there, and use the same version locally (`hugo version`). Dependabot does not manage it.
+
 New article: `hugo new content articles/my-title.md`, then fill in `description`.
 Use lowercase tags, and keep categories to a few broad buckets.
 

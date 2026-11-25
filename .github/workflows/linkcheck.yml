@@ -17,8 +17,10 @@ jobs:
 
       - name: Install Hugo
         run: |
+          # The version lives in .hugo-version (shared with the deploy workflow)
+          HUGO_VERSION="$(tr -d '[:space:]' < .hugo-version)"
           curl -fsSL -o hugo.tar.gz \
-            "https://github.com/gohugoio/hugo/releases/download/v0.162.1/hugo_extended_0.162.1_linux-amd64.tar.gz"
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
           mkdir -p "$HOME/bin"
           tar -xzf hugo.tar.gz -C "$HOME/bin" hugo
           echo "$HOME/bin" >> "$GITHUB_PATH"
