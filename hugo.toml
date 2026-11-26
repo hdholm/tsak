@@ -78,3 +78,8 @@ toLower = true
 [markup.tableOfContents]
   startLevel = 2
   endLevel = 3
+
+# Code blocks: Hugo's default "monokai" renders shell comments at about 3:1 contrast.
+# github-dark keeps every token at 4.5:1 or better.
+[markup.highlight]
+  style = 'github-dark'
