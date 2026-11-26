@@ -76,8 +76,8 @@ directory must exist before the script runs.
 
 ## The mirror script
 
-Save this as `mirror.sh`. Replace `dl.example.com` with the hostname your
-clients will use to reach the mirror.
+Save this as `mirror.sh`. Replace `dl.example.com` in the dl_host variable with
+the hostname your clients will use to reach the mirror.
 
 ```sh
 #! /bin/bash
@@ -86,6 +86,7 @@ clients will use to reach the mirror.
 # release_number manually to not have it float with the version of the mirror server
 #release_number=44
 mirror_root=/opt/mirror
+dl_host=dl.example.com
 
 # Kernel-managed lock: released when the process exits, including on errors.
 exec 9>"$mirror_root/.sync.lock"
@@ -143,15 +144,15 @@ do
         | grep -Ev "Already downloaded|100% \|   0.0   B/s \|   0.0   B \|  00m00s"
     echo "[INFO] Updating Updates $working_release metadata"
     createrepo_c --update -q \
-        -u https://dl.hdholm.net/x86_64/"$working_release"/updates/ \
+        -u https://"$dl_host"/x86_64/"$working_release"/updates/ \
         updates/
     echo "[INFO] Updating google-chrome $working_release metadata"
     createrepo_c --update -q \
-        -u https://dl.hdholm.net/x86_64/"$working_release"/google-chrome/ \
+        -u https://"$dl_host"/x86_64/"$working_release"/google-chrome/ \
         google-chrome/
     echo "[INFO] Updating fedora-cisco-openh264 $working_release metadata"
     createrepo_c --update -q \
-        -u https://dl.hdholm.net/x86_64/"$working_release"/fedora-cisco-openh264/ \
+        -u https://"$dl_host"/x86_64/"$working_release"/fedora-cisco-openh264/ \
         fedora-cisco-openh264/
 done
 ```
